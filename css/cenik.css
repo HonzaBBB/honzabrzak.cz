@@ -1,0 +1,62 @@
+/* Ceník — layout sloupců přes sdílené .page-grid */
+
+.service-head h2 {
+  font-size: 28px;
+  margin: var(--space-1) 0 var(--space-2);
+}
+
+.service-head .price {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-brand);
+  margin-bottom: var(--space-2);
+}
+
+.service-head p {
+  color: var(--color-slate);
+  font-size: 15px;
+}
+
+.service-body h3 { margin-bottom: var(--space-2); }
+
+.service-body h3 + p {
+  color: var(--color-slate);
+  font-size: 15px;
+  margin-bottom: var(--space-3);
+}
+
+.service-list {
+  list-style: none;
+  border-top: 1px solid var(--color-line);
+}
+
+.service-list li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 15px;
+}
+
+.service-list li small {
+  display: block;
+  color: var(--color-slate);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.service-note {
+  margin-top: var(--space-3);
+  font-size: 14px;
+  color: var(--color-slate);
+}
+
+.faq {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  max-width: 760px;
+}
+
+.faq h3 { margin-bottom: var(--space-1); }
+.faq p { color: var(--color-slate); font-size: 15px; }
+

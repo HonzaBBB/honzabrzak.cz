@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Případová studie: škálování kampaní e-shopu | Honza Brzák</title>
+<meta name="description" content="Navýšení investice do Google Ads o 73 % při zachované návratnosti. Konkrétní čísla z e-shopu na Shoptetu za 12 měsíců.">
+
+<!-- GTM (container beze změny) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5WG856');</script>
+<!-- /GTM -->
+
+<!-- TODO: Cookiebot snippet (přenést 1:1 z Tildy, patří NAD GTM) -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --color-ink: #121214;
+    --color-paper: #ffffff;
+    --color-fog: #f4f4f2;
+    --color-slate: #5a5f66;
+    --color-line: #e3e3e0;
+    --color-brand-50: #e9ecf3;
+    --color-brand-100: #bdc5db;
+    --color-brand-300: #7c8bb8;
+    --color-brand-600: #243e88;
+    --color-brand-800: #1d326d;
+    --color-brand-900: #172858;
+    --color-brand: var(--color-brand-600);
+    --font-display: "Plus Jakarta Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+    --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px;
+    --space-6: 48px; --space-8: 64px; --space-12: 96px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); color: var(--color-ink); background: var(--color-paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-3); }
+  .container-narrow { max-width: 760px; margin: 0 auto; padding: 0 var(--space-3); }
+  h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+  h3 { font-family: var(--font-body); font-weight: 600; font-size: 20px; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+
+  .eyebrow { font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-brand); }
+  .btn { display: inline-block; padding: 14px 28px; font-size: 15px; font-weight: 500; transition: background 120ms ease; }
+  .btn-primary { background: var(--color-brand-600); color: var(--color-paper); }
+  .btn-primary:hover { background: var(--color-brand-800); }
+  .link-arrow { color: var(--color-brand); font-weight: 500; }
+  .link-arrow:hover { color: var(--color-brand-800); }
+
+  .site-header { border-bottom: 1px solid var(--color-line); }
+  .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 18px; }
+  .site-nav { display: flex; gap: var(--space-4); font-size: 15px; font-weight: 500; }
+  .site-nav a:hover { color: var(--color-brand); }
+
+  .page-hero { padding: var(--space-12) 0 var(--space-8); border-bottom: 1px solid var(--color-line); }
+  .page-hero h1 { font-size: 42px; margin: var(--space-2) 0 var(--space-3); max-width: 860px; }
+  .page-hero .lead { font-size: 18px; color: var(--color-slate); max-width: 640px; }
+
+  .kpi-strip { border-bottom: 1px solid var(--color-line); }
+  .kpi-strip .row { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .kpi-strip .cell { padding: var(--space-4) var(--space-3); border-left: 1px solid var(--color-line); }
+  .kpi-strip .cell:first-child { border-left: none; }
+  .kpi-strip .value { font-family: var(--font-mono); font-size: 28px; font-weight: 600; color: var(--color-brand); }
+  .kpi-strip .label { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); margin-top: 4px; }
+
+  .section { padding: var(--space-8) 0; }
+  .section + .section { border-top: 1px solid var(--color-line); }
+  .section h2 { font-size: 30px; margin-bottom: var(--space-3); }
+  .section p { margin-bottom: var(--space-3); }
+  .muted { color: var(--color-slate); }
+  .section-fog { background: var(--color-fog); }
+
+  .fact-table { width: 100%; border-collapse: collapse; margin: var(--space-3) 0; font-size: 15px; }
+  .fact-table td { padding: var(--space-2) 0; border-bottom: 1px solid var(--color-line); vertical-align: top; }
+  .fact-table td:first-child { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); width: 220px; padding-right: var(--space-3); }
+
+  /* Tabulka výsledků */
+  .result-table { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; font-size: 15px; }
+  .result-table th { font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); text-align: right; padding: var(--space-2) var(--space-2); border-bottom: 1px solid var(--color-line); }
+  .result-table th:first-child { text-align: left; padding-left: 0; }
+  .result-table td { font-family: var(--font-mono); text-align: right; padding: var(--space-2); border-bottom: 1px solid var(--color-line); }
+  .result-table td:first-child { font-family: var(--font-body); text-align: left; padding-left: 0; }
+  .result-table td.delta { color: var(--color-brand); font-weight: 600; }
+
+  .screenshot-frame { border: 1px solid var(--color-line); margin: var(--space-4) 0; }
+  .screenshot-frame img { display: block; width: 100%; }
+  .screenshot-caption { font-family: var(--font-mono); font-size: 13px; color: var(--color-slate); padding: var(--space-2) var(--space-3); border-top: 1px solid var(--color-line); }
+
+  .steps { margin: var(--space-4) 0; }
+  .step { display: grid; grid-template-columns: 64px 1fr; gap: var(--space-3); padding: var(--space-3) 0; border-top: 1px solid var(--color-line); }
+  .step-ring { width: 56px; height: 56px; border: 1.5px solid var(--color-brand); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--color-brand); }
+  .step h3 { margin-bottom: 6px; }
+  .step p { color: var(--color-slate); font-size: 15px; margin: 0; }
+
+  .cta-block .btn-row { display: flex; gap: var(--space-2); margin-top: var(--space-4); }
+
+  .site-footer { background: var(--color-brand-900); color: var(--color-paper); padding: var(--space-8) 0; margin-top: var(--space-12); }
+  .site-footer .cols { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+  .site-footer nav { display: flex; gap: var(--space-3); flex-wrap: wrap; font-size: 15px; }
+  .site-footer nav a:hover { color: var(--color-brand-100); }
+  .site-footer .legal { font-family: var(--font-mono); font-size: 13px; color: var(--color-brand-100); margin-top: var(--space-4); }
+  .site-footer .legal a:hover { color: var(--color-paper); }
+
+  @media (max-width: 760px) {
+    .page-hero h1 { font-size: 30px; }
+    .kpi-strip .row { grid-template-columns: 1fr; }
+    .kpi-strip .cell { border-left: none; border-top: 1px solid var(--color-line); }
+    .kpi-strip .cell:first-child { border-top: none; }
+    .fact-table td:first-child { width: 130px; }
+    .result-table { font-size: 13px; }
+    .site-nav { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5WG856"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">Honza Brzák</a>
+    <nav class="site-nav">
+      <a href="/jak-pracuji">Jak pracuji</a>
+      <a href="/reference">Reference</a>
+      <a href="/cenik">Ceník</a>
+      <a href="/kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Případová studie · E-shop</div>
+    <h1>Investice do kampaní o 73 % vyšší, návratnost zachovaná</h1>
+    <p class="lead">E-shop na Shoptetu, dlouhodobá spolupráce. Za posledních dvanáct měsíců jsme rozšířili objem kampaní o tři čtvrtiny a udrželi návratnost investice v pásmu, které dává klientovi smysl.</p>
+  </div>
+</section>
+
+<div class="kpi-strip">
+  <div class="container row">
+    <div class="cell"><div class="value">+73 %</div><div class="label">Investice do kampaní</div></div>
+    <div class="cell"><div class="value">+57 %</div><div class="label">Hodnota konverzí</div></div>
+    <div class="cell"><div class="value">739 %</div><div class="label">Návratnost investice</div></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container-narrow">
+    <h2>Výchozí situace</h2>
+    <table class="fact-table">
+      <tr><td>Klient</td><td>E-shop, dlouhodobá spolupráce<!-- ANONYMNÍ: obor záměrně neuvádět --></td></tr>
+      <tr><td>Platforma</td><td>Shoptet</td></tr>
+      <tr><td>Kanály</td><td>Google Ads, Sklik</td></tr>
+      <tr><td>Sledované období</td><td>12 měsíců, srovnání s předchozím rokem</td></tr>
+    </table>
+    <p>Účet po několika letech spolupráce běžel stabilně a v rámci dosavadního rozpočtu vytěžený. Zadáním bylo rozšířit objem kampaní tak, aby růst investice nesnědl návratnost.</p>
+    <p class="muted">Při navyšování rozpočtu se běžně stane, že kampaně vyčerpají levné aukce a začnou nakupovat dražší prokliky. Návratnost pak klesá rychleji než roste obrat. Cílem bylo udržet tenhle propad v jednotkách procent.</p>
+  </div>
+</section>
+
+<section class="section section-fog">
+  <div class="container-narrow">
+    <h2>Co jsem udělal</h2>
+    <p class="muted">Struktura kampaní, konverzní měření i produktový feed vznikly v prvních měsících spolupráce, roky před sledovaným obdobím. Tenhle rok stavěl na hotovém základu a řešil rozšíření objemu. Výsledek stojí na desítkách drobných úprav v jeho průběhu, postup odpovídal standardnímu procesu popsanému na stránce <a href="/jak-pracuji" class="link-arrow">Jak pracuji</a>.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-ring">01</div>
+        <div><h3>Cíle návratnosti podle sezóny</h3><p>Úpravy cílového tROAS podle sezónního chování poptávky. V silných obdobích prostor pro objem, ve slabších důraz na efektivitu.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-ring">02</div>
+        <div><h3>Průběžná práce se sortimentem</h3><p>Nové zboží doplňuji do feedu v Mergadu — názvy, kategorie, atributy. Produkty a vyhledávací dotazy, které dlouhodobě spotřebovávaly rozpočet bez odpovídajícího výnosu, jsem z kampaní odebíral. Uvolněný rozpočet šel do sortimentu, který vydělával.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-ring">03</div>
+        <div><h3>Postupné navyšování rozpočtů</h3><p>Rozpočty jsem zvyšoval po krocích a po každém sledoval, jak se změna promítla do návratnosti. Tempo dalšího růstu určovala data z předchozího kroku.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-narrow">
+    <h2>Výsledky</h2>
+
+    <table class="result-table">
+      <tr>
+        <th>Metrika</th>
+        <th>Předchozí období</th>
+        <th>Sledované období</th>
+        <th>Změna</th>
+      </tr>
+      <tr>
+        <td>Investice do kampaní</td>
+        <td>193 tis. Kč</td>
+        <td>334 tis. Kč</td>
+        <td class="delta">+73 %</td>
+      </tr>
+      <tr>
+        <td>Hodnota konverzí</td>
+        <td>1,57 mil. Kč</td>
+        <td>2,46 mil. Kč</td>
+        <td class="delta">+57 %</td>
+      </tr>
+      <tr>
+        <td>Prokliky</td>
+        <td>25,0 tis.</td>
+        <td>36,2 tis.</td>
+        <td class="delta">+45 %</td>
+      </tr>
+      <tr>
+        <td>Návratnost investice</td>
+        <td>816 %</td>
+        <td>739 %</td>
+        <td>−9,5 %</td>
+      </tr>
+    </table>
+
+    <div class="screenshot-frame">
+      <img src="/assets/case-eshop-ads.png" alt="Vývoj prokliků, hodnoty konverzí, návratnosti a investice za 12 měsíců">
+      <div class="screenshot-caption">Google Ads, 12 měsíců proti předchozímu období. Publikováno se souhlasem klienta.</div>
+    </div>
+
+    <p>Objem kampaní vzrostl o tři čtvrtiny a návratnost investice klesla o necelých deset procent. To je řízený kompromis: za devět procent efektivity klient získal o 890 tisíc korun vyšší hodnotu konverzí.</p>
+    <p>Hodnota konverzí rostla pomaleji než investice, což je při škálování očekávané. Podstatné je, o kolik pomaleji — udržet návratnost nad 700 % při sedmdesátiprocentním navýšení rozpočtu znamená, že rozšíření kampaní mířilo do relevantní poptávky.</p>
+  </div>
+</section>
+
+<section class="section section-fog">
+  <div class="container-narrow">
+    <h2>Kontext výsledků</h2>
+    <p>Kampaně se na obratu e-shopu podílejí zhruba třetinou. Podobným dílem se podílely i na jeho meziročním růstu. Zbytek stojí na organickém provozu, sortimentu a práci klienta.</p>
+    <p class="muted">PPC je jedna část širší skládačky. Po několika letech v účtu je realistickým cílem stabilní výkon a kontrolované rozšiřování objemu — ne skokový růst.</p>
+  </div>
+</section>
+
+<section class="section cta-block">
+  <div class="container">
+    <h2>Máte e-shop a podobné zadání?</h2>
+    <p class="muted">Začínáme auditem — jeho cenu při navázání spolupráce odečtu z první faktury.</p>
+    <div class="btn-row">
+      <a href="/kontakt" class="btn btn-primary">Napsat zprávu</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <a href="/" class="logo">Honza Brzák</a>
+      <nav>
+        <a href="/jak-pracuji">Jak pracuji</a>
+        <a href="/reference">Reference</a>
+        <a href="/cenik">Ceník</a>
+        <a href="/blog">Blog</a>
+        <a href="/kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <div class="legal">Jan Brzák · IČO 09970878 · Felklova 2009, Roztoky · <a href="/obchodni-podminky">Obchodní podmínky</a> · <a href="/gdpr">GDPR</a> · © 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

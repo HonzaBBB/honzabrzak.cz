@@ -1,0 +1,129 @@
+/* Jak pracuji */
+
+.section h2 { font-size: 32px; margin: var(--space-2) 0 var(--space-3); }
+.section p { margin-bottom: var(--space-3); }
+.section p.muted { color: var(--color-slate); }
+
+.day-steps {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.day-step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.step-ring {
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid var(--color-brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-brand);
+}
+
+.day-step h3 { margin-bottom: 6px; }
+.day-step p {
+  color: var(--color-slate);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Deník změn — ukázková karta záznamu */
+.record {
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  font-family: var(--font-mono);
+  margin: var(--space-6) 0;
+}
+
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-line);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+
+.record-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.record-row:last-child { border-bottom: none; }
+
+.record-key {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+
+.record-val {
+  font-size: 14px;
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+.record-val em {
+  font-style: normal;
+  color: var(--color-brand);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.split-col {
+  border: 1px solid var(--color-line);
+  padding: var(--space-4);
+  background: var(--color-paper);
+}
+
+.split-col h3 { margin-bottom: var(--space-3); }
+.split-col ul { list-style: none; }
+
+.split-col li {
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--color-line);
+  font-size: 15px;
+  color: var(--color-ink);
+}
+
+.split-col li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.split-col li small {
+  display: block;
+  color: var(--color-slate);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+@media (max-width: 760px) {
+  .section h2 { font-size: 26px; }
+  .split { grid-template-columns: 1fr; }
+  .record-row { grid-template-columns: 1fr; gap: 2px; }
+}

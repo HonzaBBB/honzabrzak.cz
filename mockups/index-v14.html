@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPC specialista pro Google Ads a Sklik — Honza Brzák</title>
+<meta name="description" content="Standardizované řízení PPC kampaní. Google Ads, Sklik, Meta Ads a GA4 — vlastní procesy a automatizace pro spolehlivou každodenní správu.">
+
+<!-- GTM (container beze změny) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5WG856');</script>
+<!-- /GTM -->
+
+<!-- TODO: Cookiebot snippet (přenést 1:1 z Tildy, patří NAD GTM) -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --color-ink: #121214;
+    --color-paper: #ffffff;
+    --color-fog: #f4f4f2;
+    --color-slate: #5a5f66;
+    --color-line: #e3e3e0;
+    --color-brand-50: #e9ecf3;
+    --color-brand-100: #bdc5db;
+    --color-brand-300: #7c8bb8;
+    --color-brand-600: #243e88;
+    --color-brand-800: #1d326d;
+    --color-brand-900: #172858;
+    --color-brand: var(--color-brand-600);
+    --font-display: "Plus Jakarta Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+    --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px;
+    --space-6: 48px; --space-8: 64px; --space-12: 96px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); color: var(--color-ink); background: var(--color-paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-3); }
+  h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+  h3 { font-family: var(--font-body); font-weight: 600; font-size: 20px; line-height: 1.3; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+  img { display: block; max-width: 100%; }
+
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 13px; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-brand);
+  }
+  .btn { display: inline-block; padding: 14px 28px; font-size: 15px; font-weight: 500; transition: background 120ms ease, color 120ms ease; }
+  .btn-primary { background: var(--color-brand-600); color: var(--color-paper); }
+  .btn-primary:hover { background: var(--color-brand-800); }
+  .btn-secondary { background: var(--color-brand-50); color: var(--color-brand-800); }
+  .btn-secondary:hover { background: var(--color-brand-300); color: var(--color-paper); }
+  .link-arrow { color: var(--color-brand); font-weight: 500; }
+  .link-arrow:hover { color: var(--color-brand-800); }
+
+  /* ── Header ─────────────────────────────── */
+  .site-header { border-bottom: 1px solid var(--color-line); }
+  .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  .site-nav { display: flex; gap: var(--space-4); font-size: 15px; font-weight: 500; }
+  .site-nav a:hover { color: var(--color-brand); }
+
+  /* ── Hero ───────────────────────────────── */
+  .hero { padding: var(--space-12) 0 var(--space-8); }
+  .hero .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-6); align-items: center; }
+  .hero h1 { font-size: 48px; margin: var(--space-2) 0 var(--space-3); }
+  .hero p.lead { font-size: 18px; color: var(--color-slate); max-width: 480px; margin-bottom: var(--space-4); }
+  .tag-row { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-4); }
+  .tag { background: var(--color-fog); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; padding: 6px 12px; color: var(--color-ink); }
+  .btn-row { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+  .photo-frame { position: relative; border: 1px solid var(--color-line); aspect-ratio: 3 / 4; background: var(--color-fog); }
+  .photo-crop { width: 100%; height: 100%; overflow: hidden; }
+  .photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .badge-ring {
+    position: absolute; bottom: -24px; left: -24px; width: 96px; height: 96px;
+    border: 1.5px solid var(--color-brand); border-radius: 50%; background: var(--color-paper);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: var(--font-mono); color: var(--color-brand); text-align: center; line-height: 1.2;
+  }
+  .badge-ring strong { font-size: 12px; font-weight: 600; }
+  .badge-ring small { font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); margin-top: 3px; }
+
+  /* ── Stats strip (signature) ────────────── */
+  .stats { border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
+  .stats .row { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stats .cell { padding: var(--space-4) var(--space-3); border-left: 1px solid var(--color-line); }
+  .stats .cell:first-child { border-left: none; }
+  .stats .value { font-family: var(--font-mono); font-size: 28px; font-weight: 600; }
+  .stats .label { font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); margin-top: 4px; }
+
+  /* ── Sekce obecně ───────────────────────── */
+  .section { padding: var(--space-12) 0; }
+  .section + .section { border-top: 1px solid var(--color-line); }
+  .section h2 { font-size: 40px; margin: var(--space-2) 0 var(--space-3); }
+  .section .section-lead { font-size: 18px; color: var(--color-slate); max-width: 620px; }
+  .section-fog { background: var(--color-fog); }
+
+  /* ── Diferenciátor ──────────────────────── */
+  .dif-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-6); }
+  .dif-card { border: 1px solid var(--color-line); padding: var(--space-4); }
+  .dif-card h3 { margin-bottom: var(--space-2); }
+  .dif-card p { color: var(--color-slate); font-size: 15px; }
+  .dif-more { margin-top: var(--space-6); }
+
+  /* ── Reference ──────────────────────────── */
+  .logo-strip { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-6); margin-top: var(--space-6); padding: var(--space-3) 0; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
+  .logo-strip img { height: 32px; width: auto; filter: grayscale(1); opacity: 0.65; }
+  .ref-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); margin-top: var(--space-6); }
+  .ref-card { background: var(--color-fog); padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-3); }
+  .ref-metric { font-family: var(--font-mono); font-size: 24px; font-weight: 600; color: var(--color-brand); }
+  .ref-quote { font-size: 16px; color: var(--color-ink); }
+  .ref-client { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); margin-top: auto; }
+
+  /* ── Ceník ──────────────────────────────── */
+  .price-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-6); }
+  .price-card { background: var(--color-paper); border: 1px solid var(--color-line); padding: var(--space-4); display: flex; flex-direction: column; }
+  .price-card h3 { margin-bottom: var(--space-1); }
+  .price-card .price { font-family: var(--font-mono); font-size: 24px; font-weight: 600; margin: var(--space-2) 0; }
+  .price-card p { color: var(--color-slate); font-size: 15px; margin-bottom: var(--space-3); }
+  .price-card .link-arrow { margin-top: auto; font-size: 15px; }
+
+  /* ── Kontakt ────────────────────────────── */
+  .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-8); margin-top: var(--space-6); }
+  .form-field { margin-bottom: var(--space-3); }
+  .form-field label { display: block; font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); margin-bottom: var(--space-1); }
+  .form-field input, .form-field textarea {
+    width: 100%; padding: 12px 14px; font-family: var(--font-body); font-size: 16px;
+    border: 1px solid var(--color-line); background: var(--color-paper); color: var(--color-ink);
+  }
+  .form-field input:focus, .form-field textarea:focus { border-color: var(--color-brand); outline: none; }
+  .form-field textarea { min-height: 140px; resize: vertical; }
+  .contact-aside p { color: var(--color-slate); margin-bottom: var(--space-3); }
+  .contact-line { font-family: var(--font-mono); font-size: 15px; margin-bottom: var(--space-2); }
+  .contact-line a { color: var(--color-brand); }
+  .contact-line a:hover { color: var(--color-brand-800); }
+
+  /* ── Footer ─────────────────────────────── */
+  .site-footer { background: var(--color-brand-900); color: var(--color-paper); padding: var(--space-8) 0; margin-top: var(--space-12); }
+  .site-footer .cols { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+  .site-footer nav { display: flex; gap: var(--space-3); flex-wrap: wrap; font-size: 15px; }
+  .site-footer nav a:hover { color: var(--color-brand-100); }
+  .site-footer .legal { font-family: var(--font-mono); font-size: 13px; color: var(--color-brand-100); margin-top: var(--space-4); }
+
+  @media (max-width: 900px) {
+    .dif-cards, .price-cards { grid-template-columns: 1fr; }
+    .ref-cards { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .hero .grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 36px; }
+    .section h2 { font-size: 28px; }
+    .stats .row { grid-template-columns: 1fr; }
+    .stats .cell { border-left: none; border-top: 1px solid var(--color-line); }
+    .stats .cell:first-child { border-top: none; }
+    .site-nav { display: none; } /* TODO: mobilní menu, až bude potřeba */
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5WG856"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">Honza Brzák</a>
+    <nav class="site-nav">
+      <a href="/jak-pracuji">Jak pracuji</a>
+      <a href="#reference">Reference</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ 1 · HERO ══════════════════════════════ -->
+<section class="hero">
+  <div class="container grid">
+    <div>
+      <div class="eyebrow">PPC Freelancer</div>
+      <h1>Standardizované řízení PPC kampaní</h1>
+      <p class="lead">Používám vlastní procesy a automatizace pro přesnou a spolehlivou každodenní správu kampaní. Mám tak prostor věnovat se strategii a specifikům každého klienta.</p>
+      <div class="tag-row">
+        <span class="tag">Google Ads</span>
+        <span class="tag">Sklik</span>
+        <span class="tag">GA4</span>
+      </div>
+      <div class="btn-row">
+        <a href="#kontakt" class="btn btn-primary">Napsat zprávu</a>
+        <a href="/jak-pracuji" class="btn btn-secondary">Jak pracuji</a>
+      </div>
+    </div>
+    <div class="photo-frame">
+      <div class="photo-crop">
+        <img src="/assets/honza-hero.webp" alt="Honza Brzák, PPC specialista">
+      </div>
+      <div class="badge-ring"><strong>GOOGLE</strong><small>Partner</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats strip -->
+<div class="stats">
+  <div class="container row">
+    <div class="cell"><div class="value">Google</div><div class="label">Partner</div></div>
+    <div class="cell"><div class="value">5+</div><div class="label">Let PPC</div></div>
+    <div class="cell"><div class="value">7 dní v týdnu</div><div class="label">Kontrola účtů</div></div>
+  </div>
+</div>
+
+<!-- ══ 2 · DIFERENCIÁTOR ═════════════════════ -->
+<section class="section" id="jak-pracuji">
+  <div class="container">
+    <div class="eyebrow">Jak pracuji</div>
+    <h2>Každodenní správa běží podle standardů</h2>
+    <p class="section-lead">Kampaně spravuji podle písemně definovaných postupů. Denní kontroly běží automatizovaně, vlastními skripty. Stejná rutina platí pro každý účet. Díky tomu mám prostor věnovat se strategii a specifikům vašeho podnikání.</p>
+
+    <div class="dif-cards">
+      <div class="dif-card">
+        <h3>Denní automatizované kontroly</h3>
+        <p>Skripty každé ráno projdou rozpočty, výkon a stav reklam ve všech účtech. Odchylky vidím dřív, než se promítnou do výsledků.</p>
+      </div>
+      <div class="dif-card">
+        <h3>Definované postupy</h3>
+        <p>Audit, spuštění i průběžná optimalizace mají písemný checklist. Kvalita správy stojí na postupu, který se dá zopakovat.</p>
+      </div>
+      <div class="dif-card">
+        <h3>Přehledný měsíční reporting</h3>
+        <p>Každý měsíc dostanete přehled účtu s pevnou strukturou a srovnáním s předchozím obdobím. Metriky volím podle toho, co souvisí s vaším byznysem.</p>
+      </div>
+    </div>
+
+    <p class="dif-more"><a href="/jak-pracuji" class="link-arrow">Celý postup popisuji na stránce Jak pracuji&nbsp;→</a></p>
+  </div>
+</section>
+
+<!-- ══ 3 · REFERENCE ═════════════════════════ -->
+<section class="section" id="reference">
+  <div class="container">
+    <div class="eyebrow">Reference</div>
+    <h2>Výběr ze spoluprací</h2>
+    <p class="section-lead">Dlouhodobé spolupráce s e-shopy a firmami ve službách. Kompletní přehled najdete na samostatné stránce.</p>
+
+    <!-- Logo strip: exportovat loga z Tildy do /assets/loga/, ideálně jednobarevná/šedá varianta -->
+    <div class="logo-strip">
+      <img src="/assets/loga/agel-plus.svg" alt="AGEL Plus">
+      <img src="/assets/loga/etriatlon.svg" alt="Etriatlon">
+      <img src="/assets/loga/algorithmics.svg" alt="Algorithmics">
+      <img src="/assets/loga/aeroprague.svg" alt="AeroPrague">
+      <img src="/assets/loga/nemocnice-kolin.svg" alt="Nemocnice Kolín">
+      <!-- + další loga ze stávajícího webu -->
+    </div>
+
+    <div class="ref-cards">
+      <!-- POZOR: anonymní case study umožňuje dopočítat PNO ~4,6 %.
+           Ve jmenovaných recenzích proto NEUVÁDĚT PNO ani absolutní čísla.
+           Pokud citace ze stávajícího webu obsahuje PNO, použij jinou pasáž nebo jiného klienta. -->
+      <div class="ref-card">
+        <div class="ref-metric">Spolupráce od [rok]</div>
+        <p class="ref-quote">[Citaci přenést doslovně ze stávajícího webu — bez konkrétních čísel]</p>
+        <div class="ref-client">[Jméno — firma]</div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-metric">[nečíselný údaj — např. obor nebo délka spolupráce]</div>
+        <p class="ref-quote">[Citaci přenést doslovně ze stávajícího webu — bez konkrétních čísel]</p>
+        <div class="ref-client">[Jméno — firma]</div>
+      </div>
+    </div>
+
+    <p class="dif-more"><a href="/pripadova-studie-eshop" class="link-arrow">Případová studie: škálování kampaní e-shopu&nbsp;→</a> &nbsp;·&nbsp; <a href="/reference" class="link-arrow">Všechny reference&nbsp;→</a></p>
+  </div>
+</section>
+
+<!-- ══ 4 · CENÍK ═════════════════════════════ -->
+<section class="section section-fog" id="cenik">
+  <div class="container">
+    <h2>Ceník</h2>
+    <p class="section-lead">Cena je měsíční paušál. Kryje každodenní automatizované kontroly, průběžnou práci na účtu a rezervovanou kapacitu pro situace, které nepočkají. Faktura je každý měsíc stejná a předem známá.</p>
+
+    <div class="price-cards">
+      <div class="price-card">
+        <h3>Audit účtu</h3>
+        <div class="price">7 500 Kč</div>
+        <p>Písemný audit podle checklistu: struktura účtu, měření, rozpočty a ztráty podílu zobrazení. Výstupem je seznam problémů, quick wins a roadmapa podle priority. Při navázání spolupráce cenu auditu odečtu z první faktury.</p>
+        <a href="/cenik" class="link-arrow">Podrobnosti&nbsp;→</a>
+      </div>
+      <div class="price-card">
+        <h3>Správa kampaní — služby a lead&nbsp;gen</h3>
+        <div class="price">od 14 000 Kč/měs</div>
+        <p>Google Ads i Sklik v ceně. Denní automatizované kontroly, průběžná optimalizace, měsíční report a strategie.</p>
+        <a href="/cenik" class="link-arrow">Podrobnosti&nbsp;→</a>
+      </div>
+      <div class="price-card">
+        <h3>Správa kampaní — e-shop</h3>
+        <div class="price">od 19 000 Kč/měs</div>
+        <p>Vše ze správy pro služby a navíc práce s produkty: feedy v Mergadu, nákupní kampaně a jejich struktura. Jsem Shoptet Partner s přednostním přístupem k podpoře Shoptetu.</p>
+        <a href="/cenik" class="link-arrow">Podrobnosti&nbsp;→</a>
+      </div>
+    </div>
+
+    <p class="dif-more" style="color:var(--color-slate)">Spolupráce běží měsíc po měsíci, bez smluvního závazku. Jednorázové <a href="/jednorazove_nastaveni_google_ads" class="link-arrow">nastavení Google&nbsp;Ads</a> nabízím jako samostatnou službu. Větší účty a specifická zadání řeším individuální nabídkou.</p>
+
+    <p class="dif-more"><a href="/cenik" class="link-arrow">Kompletní ceník&nbsp;→</a></p>
+  </div>
+</section>
+
+<!-- ══ 5 · KONTAKT ═══════════════════════════ -->
+<section class="section" id="kontakt">
+  <div class="container">
+    <div class="eyebrow">Kontakt</div>
+    <h2>Napište mi</h2>
+
+    <div class="contact-grid">
+      <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/dekuji">
+        <input type="hidden" name="form-name" value="kontakt">
+        <p style="display:none"><label>Nevyplňujte: <input name="bot-field"></label></p>
+        <div class="form-field">
+          <label for="f-name">Jméno</label>
+          <input type="text" id="f-name" name="jmeno" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="f-email">E-mail</label>
+          <input type="email" id="f-email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="f-web">Web</label>
+          <input type="url" id="f-web" name="web" placeholder="https://" autocomplete="url">
+        </div>
+        <div class="form-field">
+          <label for="f-msg">Zpráva</label>
+          <textarea id="f-msg" name="zprava" required placeholder="Popište stručně své podnikání a co od kampaní očekáváte."></textarea>
+        </div>
+        <div class="form-field form-consent">
+          <label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font-family:var(--font-body);font-size:14px;color:var(--color-slate)">
+            <input type="checkbox" name="gdpr" required style="width:auto;margin-top:4px">
+            <span>Souhlasím se <a href="/gdpr" class="link-arrow">zpracováním osobních údajů</a> za účelem vyřízení poptávky.</span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Odeslat zprávu</button>
+      </form>
+
+      <div class="contact-aside">
+        <div class="contact-line"><a href="mailto:ppc@honzabrzak.cz">ppc@honzabrzak.cz</a></div>
+        <div class="contact-line"><a href="tel:+420724672491">+420 724 672 491</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <a href="/" class="logo">Honza Brzák</a>
+      <nav>
+        <a href="/jak-pracuji">Jak pracuji</a>
+        <a href="/reference">Reference</a>
+        <a href="/cenik">Ceník</a>
+        <a href="/blog">Blog</a>
+        <a href="/kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <div class="legal">Jan Brzák · IČO 09970878 · Felklova 2009, Roztoky · <a href="/obchodni-podminky">Obchodní podmínky</a> · <a href="/gdpr">GDPR</a> · © 2026<!-- URL právních stránek srovnat přesně s Tildou --></div>
+  </div>
+</footer>
+
+</body>
+</html>

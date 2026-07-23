@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jak pracuji — standardizované řízení PPC kampaní | Honza Brzák</title>
+<meta name="description" content="Správa PPC kampaní podle písemně definovaných postupů. Denní automatizované kontroly, checklisty a reporting, který ukazuje skutečná čísla.">
+
+<!-- GTM (container beze změny) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5WG856');</script>
+<!-- /GTM -->
+
+<!-- TODO: Cookiebot snippet (přenést 1:1 z Tildy, patří NAD GTM) -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --color-ink: #121214;
+    --color-paper: #ffffff;
+    --color-fog: #f4f4f2;
+    --color-slate: #5a5f66;
+    --color-line: #e3e3e0;
+    --color-brand-50: #e9ecf3;
+    --color-brand-100: #bdc5db;
+    --color-brand-300: #7c8bb8;
+    --color-brand-600: #243e88;
+    --color-brand-800: #1d326d;
+    --color-brand-900: #172858;
+    --color-brand: var(--color-brand-600);
+    --font-display: "Plus Jakarta Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+    --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px;
+    --space-6: 48px; --space-8: 64px; --space-12: 96px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); color: var(--color-ink); background: var(--color-paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-3); }
+  .container-narrow { max-width: 760px; margin: 0 auto; padding: 0 var(--space-3); }
+  h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+  h3 { font-family: var(--font-body); font-weight: 600; font-size: 20px; line-height: 1.3; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+
+  .eyebrow { font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-brand); }
+  .btn { display: inline-block; padding: 14px 28px; font-size: 15px; font-weight: 500; transition: background 120ms ease, color 120ms ease; }
+  .btn-primary { background: var(--color-brand-600); color: var(--color-paper); }
+  .btn-primary:hover { background: var(--color-brand-800); }
+  .btn-secondary { background: var(--color-brand-50); color: var(--color-brand-800); }
+  .btn-secondary:hover { background: var(--color-brand-300); color: var(--color-paper); }
+  .link-arrow { color: var(--color-brand); font-weight: 500; }
+  .link-arrow:hover { color: var(--color-brand-800); }
+
+  .site-header { border-bottom: 1px solid var(--color-line); }
+  .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 18px; }
+  .site-nav { display: flex; gap: var(--space-4); font-size: 15px; font-weight: 500; }
+  .site-nav a:hover { color: var(--color-brand); }
+
+  .page-hero { padding: var(--space-12) 0 var(--space-8); border-bottom: 1px solid var(--color-line); }
+  .page-hero h1 { font-size: 48px; margin: var(--space-2) 0 var(--space-3); }
+  .page-hero .lead { font-size: 18px; color: var(--color-slate); max-width: 620px; }
+
+  .section { padding: var(--space-8) 0; }
+  .section + .section { border-top: 1px solid var(--color-line); }
+  .section h2 { font-size: 32px; margin: var(--space-2) 0 var(--space-3); }
+  .section p { margin-bottom: var(--space-3); }
+  .section p.muted { color: var(--color-slate); }
+  .section-fog { background: var(--color-fog); }
+
+  /* Sekvence dne — kruhové kroky (echo loga) */
+  .day-steps { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
+  .day-step { display: grid; grid-template-columns: 64px 1fr; gap: var(--space-3); align-items: start; }
+  .step-ring {
+    width: 56px; height: 56px; border: 1.5px solid var(--color-brand); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--color-brand);
+  }
+  .day-step h3 { margin-bottom: 6px; }
+  .day-step p { color: var(--color-slate); font-size: 15px; margin: 0; }
+  .day-step .time { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-slate); }
+
+  /* Dva sloupce: automatizace vs. ruční práce */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-6); }
+  .split-col { border: 1px solid var(--color-line); padding: var(--space-4); background: var(--color-paper); }
+  .split-col h3 { margin-bottom: var(--space-3); }
+  .split-col ul { list-style: none; }
+  .split-col li { padding: var(--space-2) 0; border-top: 1px solid var(--color-line); font-size: 15px; color: var(--color-ink); }
+  .split-col li:first-child { border-top: none; padding-top: 0; }
+  .split-col li small { display: block; color: var(--color-slate); font-size: 13px; margin-top: 2px; }
+
+  .cta-block { text-align: left; }
+  .cta-block .btn-row { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4); }
+
+  .site-footer { background: var(--color-brand-900); color: var(--color-paper); padding: var(--space-8) 0; margin-top: var(--space-12); }
+  .site-footer .cols { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+  .site-footer nav { display: flex; gap: var(--space-3); flex-wrap: wrap; font-size: 15px; }
+  .site-footer nav a:hover { color: var(--color-brand-100); }
+  .site-footer .legal { font-family: var(--font-mono); font-size: 13px; color: var(--color-brand-100); margin-top: var(--space-4); }
+
+  @media (max-width: 760px) {
+    .page-hero h1 { font-size: 36px; }
+    .section h2 { font-size: 26px; }
+    .split { grid-template-columns: 1fr; }
+    .site-nav { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5WG856"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">Honza Brzák</a>
+    <nav class="site-nav">
+      <a href="/jak-pracuji">Jak pracuji</a>
+      <a href="/reference">Reference</a>
+      <a href="/cenik">Ceník</a>
+      <a href="/kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Jak pracuji</div>
+    <h1>Standardy pro každodenní správu kampaní</h1>
+    <p class="lead">Výkon PPC kampaní se rozhoduje v detailech: rozpočet, který přetekl, reklama zamítnutá přes víkend, konverze, která se přestala měřit. Můj proces zajišťuje, že se tyhle věci kontrolují každý den, stejným způsobem, v každém účtu.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-narrow">
+    <h2>Proč to dělám takhle</h2>
+    <p>Kvalita správy kampaní obvykle stojí na disciplíně jednotlivce. Když má specialista nabitý týden, kontroly se odloží a chyby zůstanou v účtu déle, než by měly.</p>
+    <p>Proto mám každodenní rutinu definovanou písemně a z velké části automatizovanou. Skripty, které jsem si pro správu postavil, projdou účty každé ráno a upozorní mě na cokoliv, co vybočuje. Kontrola tak proběhne vždy — bez ohledu na to, jaký mám den.</p>
+    <p>Automatizace pokrývá rutinu a kontrolu. Rozhodnutí dělám já. Čas, který mi standardizace uvolní, patří strategii: struktuře účtu, testování a věcem specifickým pro váš byznys.</p>
+  </div>
+</section>
+
+<section class="section section-fog">
+  <div class="container">
+    <div class="eyebrow">Rutina</div>
+    <h2>Jak vypadá běžný den správy vašeho účtu</h2>
+
+    <div class="day-steps">
+      <div class="day-step">
+        <div class="step-ring">01</div>
+        <div>
+          <h3>Automatizované kontroly</h3>
+          <p>Skripty projdou všechny účty: čerpání rozpočtů, výkon proti benchmarku, stav a schválení reklam, funkčnost konverzního měření.</p>
+        </div>
+      </div>
+      <div class="day-step">
+        <div class="step-ring">02</div>
+        <div>
+          <h3>Vyhodnocení odchylek</h3>
+          <p>Dostanu přehled toho, co vybočuje. Rozliším, co je šum a co vyžaduje zásah.</p>
+        </div>
+      </div>
+      <div class="day-step">
+        <div class="step-ring">03</div>
+        <div>
+          <h3>Zásah podle postupu</h3>
+          <p>Pro běžné situace mám definovaný postup řešení. Neobvyklé situace řeším individuálně a postup si zapíšu pro příště.</p>
+        </div>
+      </div>
+      <div class="day-step">
+        <div class="step-ring">04</div>
+        <div>
+          <h3>Záznam změn</h3>
+          <p>Každá podstatná změna v účtu má záznam: co, kdy a proč. U měsíčního reportu se tak bavíme o faktech.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Co běží automatizovaně a co dělám ručně</h2>
+
+    <div class="split">
+      <div class="split-col">
+        <h3>Automatizace</h3>
+        <ul>
+          <li>Denní kontrola rozpočtů a čerpání<small>upozornění na přetečení i nedočerpání</small></li>
+          <li>Hlídání anomálií výkonu<small>propady i skoky proti očekávaným hodnotám</small></li>
+          <li>Kontrola stavu reklam<small>zamítnutí a omezení zachytím tentýž den</small></li>
+          <li>Kontrola konverzního měření<small>výpadek měření je nejdražší tichá chyba v PPC</small></li>
+        </ul>
+      </div>
+      <div class="split-col">
+        <h3>Ruční práce</h3>
+        <ul>
+          <li>Strategie a struktura účtu<small>vychází z vašeho byznysu, marží a cílů</small></li>
+          <li>Testování<small>kreativy, texty, cílení — s hypotézou a vyhodnocením</small></li>
+          <li>Interpretace čísel<small>skript pozná odchylku, souvislosti dodám já</small></li>
+          <li>Komunikace<small>píšu vám já, žádný account manager mezi námi</small></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-fog">
+  <div class="container-narrow">
+    <h2>Transparentnost</h2>
+    <p>Do systému, kterým účty spravuji, můžete nahlédnout. Demo verzi mých automatizačních skriptů zveřejňuji na GitHubu — vidíte, co přesně v účtech běží. Know-how je v každodenní práci s nimi.<!-- TODO: doplnit odkaz na repo, nasadit až po zveřejnění --></p>
+    <p>Účty jsou celou dobu vaše a máte k nim plný přístup. Nezávislý audit mé práce si můžete nechat udělat kdykoliv — a vítám ho. Dobrý tip zvenku je přínos pro váš výkon.</p>
+    <p>Při ukončení spolupráce předám účet, měření i dokumentaci s plnou součinností další agentuře nebo specialistovi.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-narrow">
+    <h2>Co z toho máte vy</h2>
+    <p>Kampaně, o kterých víte, že je někdo každý den zkontroloval. Report, který ukazuje stejná čísla, jaká vidím já. A specialistu, který má díky automatizované rutině čas přemýšlet nad vaším byznysem.</p>
+    <p class="muted">PPC je jedna část širší skládačky vašeho podnikání. Slibuji proces, který je poctivý a opakovatelný — výsledek pak společně stavíme na datech.</p>
+  </div>
+</section>
+
+<section class="section section-fog">
+  <div class="container cta-block">
+    <h2>Chcete to vidět na svém účtu?</h2>
+    <p class="muted">Průběh spolupráce krok za krokem popisuji na samostatné stránce.</p>
+    <div class="btn-row">
+      <a href="/kontakt" class="btn btn-primary">Napsat zprávu</a>
+      <a href="/jak_funguje_spoluprace_se_mnou" class="btn btn-secondary">Jak funguje spolupráce</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <a href="/" class="logo">Honza Brzák</a>
+      <nav>
+        <a href="/jak-pracuji">Jak pracuji</a>
+        <a href="/reference">Reference</a>
+        <a href="/cenik">Ceník</a>
+        <a href="/blog">Blog</a>
+        <a href="/kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <div class="legal">[IČO / fakturační údaje] · © 2026 Honza Brzák</div>
+  </div>
+</footer>
+
+</body>
+</html>

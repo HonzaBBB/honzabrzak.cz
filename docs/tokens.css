@@ -1,0 +1,77 @@
+/* ==========================================================================
+   honzabrzak.cz — design tokens
+   Inspirace: Olivine Marketing, Soapbox Retail
+   Princip: minimalismus, ostré hrany, žádné gradienty, žádné zbytečné animace
+   ========================================================================== */
+
+:root {
+  /* --- Barvy --- */
+  --color-ink: #121214;      /* primární text, nadpisy */
+  --color-paper: #ffffff;    /* hlavní pozadí */
+  --color-fog: #f4f4f2;      /* pozadí sekcí (ceník, recenze) */
+  --color-slate: #5a5f66;    /* sekundární text, popisky */
+  --color-line: #e3e3e0;     /* hairline borders, oddělovače */
+
+  /* Brand — barva z loga (#243E88), zbytek škály odvozený matematicky */
+  --color-brand-50: #e9ecf3;   /* velmi světlé pozadí, badge */
+  --color-brand-100: #bdc5db;  /* světlejší pozadí, disabled stavy */
+  --color-brand-300: #7c8bb8;  /* sekundární prvky na brand pozadí */
+  --color-brand-600: #243e88;  /* základní brand = barva loga */
+  --color-brand-800: #1d326d;  /* hover/active primárního tlačítka */
+  --color-brand-900: #172858;  /* dark varianta — patička / jedna dark sekce */
+  --color-brand: var(--color-brand-600); /* shorthand pro výchozí použití */
+
+  /* --- Typografie --- */
+  --font-display: "Plus Jakarta Sans", sans-serif; /* dočasné — nahradit placeným fontem (Suisse Int'l / Neue Montreal / Söhne) až při koupi */
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Type scale — desktop */
+  --text-h1: 64px;
+  --text-h1-line: 68px;
+  --text-h2: 40px;
+  --text-h2-line: 44px;
+  --text-h3: 24px;
+  --text-h3-line: 28px;
+  --text-body: 16px;
+  --text-body-line: 26px;
+  --text-caption: 13px;
+  --text-caption-line: 18px;
+  --text-caption-tracking: 0.04em;
+
+  /* --- Spacing — 8px grid --- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+  --space-16: 128px;
+  --space-24: 192px;
+
+  /* --- Layout --- */
+  --container-max: 1200px;
+  --container-padding: 24px;
+  --grid-gutter: 24px;
+
+  /* --- Komponenty --- */
+  --radius: 0;                 /* všude, bez výjimky */
+  --shadow: none;               /* oddělení řeší hairline border nebo --color-fog */
+  --border-hairline: 1px solid var(--color-line);
+  --transition-fast: 100ms ease;
+  --transition-hover: 120ms ease;
+}
+
+/* Type scale — mobile (zúžit od ~640px) */
+@media (max-width: 640px) {
+  :root {
+    --text-h1: 40px;
+    --text-h1-line: 44px;
+    --text-h2: 28px;
+    --text-h2-line: 32px;
+    --text-h3: 20px;
+    --text-h3-line: 24px;
+    --container-padding: 16px;
+  }
+}
