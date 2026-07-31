@@ -1,13 +1,18 @@
 /* Jak pracuji */
 
-.section h2 { font-size: 32px; margin: var(--space-2) 0 var(--space-3); }
+.section h2 {
+  font-size: 32px;
+  margin: 0 0 var(--space-3);
+}
+
+.section .eyebrow + h2 { margin-top: var(--space-2); }
+
 .section p { margin-bottom: var(--space-3); }
 .section p.muted { color: var(--color-slate); }
 
 .day-steps {
   display: grid;
   gap: var(--space-4);
-  margin-top: var(--space-6);
 }
 
 .day-step {
@@ -91,7 +96,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
-  margin-top: var(--space-6);
 }
 
 .split-col {

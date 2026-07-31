@@ -20,8 +20,8 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 - [ ] **Reference homepage** — doplnit 2 citace ze stávajícího webu (bez PNO / absolutních čísel)
 - [ ] **Reference stránka** — kompletní seznam + citace z Tildy
 - [ ] **`/jak_funguje_spoluprace_se_mnou`** — přepsat obsah z Tildy (kroky 01–09)
-- [ ] **`/jednorazove_nastaveni_google_ads`** — přepsat obsah + cenu z Tildy
-- [ ] **GDPR + obchodní podmínky** — převést plné znění, srovnat URL s Tildou
+- [x] **`/jednorazove_nastaveni_google_ads`** — přepsat obsah + cenu (14 400 Kč)
+- [x] **GDPR + obchodní podmínky** — texty z Tildy; redirect `/obchodni_podminky` → `/obchodni-podminky/`
 - [ ] **SLA odpovědi** — doplnit „X pracovních dnů“ na ceníku a kontaktu
 - [ ] **GitHub odkaz** na `/jak-pracuji` (transparentnost / demo skripty) — až bude repo veřejné
 - [ ] **Blog** — napsat 3 články (Shoptet Google Ads, specialista vs agentura, cena správy v ČR)

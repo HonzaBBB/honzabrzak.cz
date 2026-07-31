@@ -173,13 +173,6 @@ img { display: block; max-width: 100%; }
 
 /* ── Form ─────────────────────────────────── */
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: var(--space-8);
-  margin-top: var(--space-6);
-}
-
 .form-field { margin-bottom: var(--space-3); }
 
 .form-field label {
@@ -232,6 +225,20 @@ img { display: block; max-width: 100%; }
   margin-top: 4px;
 }
 
+.contact-aside {
+  color: var(--color-slate);
+}
+
+.contact-aside .section-title,
+.contact-aside h2 {
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+}
+
+.contact-aside .eyebrow {
+  margin-bottom: var(--space-2);
+}
+
 .contact-aside p {
   color: var(--color-slate);
   margin-bottom: var(--space-3);
@@ -280,6 +287,36 @@ img { display: block; max-width: 100%; }
 
 .site-footer .legal a:hover { color: var(--color-paper); }
 
+/* ── Legal docs (OP, GDPR) ────────────────── */
+
+.legal-doc h2 {
+  font-size: 22px;
+  margin: var(--space-6) 0 var(--space-2);
+}
+
+.legal-doc h2:first-child { margin-top: 0; }
+
+.legal-doc p,
+.legal-doc li {
+  font-size: 15px;
+  color: var(--color-slate);
+  margin-bottom: var(--space-2);
+}
+
+.legal-doc ul {
+  list-style: disc;
+  padding-left: 1.25em;
+  margin-bottom: var(--space-3);
+}
+
+.legal-doc a {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-doc a:hover { color: var(--color-brand-800); }
+
 /* ── Placeholder note ─────────────────────── */
 
 .todo-note {
@@ -296,7 +333,6 @@ img { display: block; max-width: 100%; }
 @media (max-width: 760px) {
   .page-grid { grid-template-columns: 1fr; gap: var(--space-3); }
   .page-hero h1 { font-size: 36px; }
-  .contact-grid { grid-template-columns: 1fr; }
   .site-nav { display: none; } /* TODO: mobilní menu */
 }
 

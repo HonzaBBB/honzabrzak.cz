@@ -49,42 +49,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="contact-grid">
-      <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/dekuji/">
-        <input type="hidden" name="form-name" value="kontakt">
-        <p style="display:none"><label>Nevyplňujte: <input name="bot-field"></label></p>
-        <div class="form-field">
-          <label for="f-name">Jméno</label>
-          <input type="text" id="f-name" name="jmeno" required autocomplete="name">
-        </div>
-        <div class="form-field">
-          <label for="f-email">E-mail</label>
-          <input type="email" id="f-email" name="email" required autocomplete="email">
-        </div>
-        <div class="form-field">
-          <label for="f-web">Web</label>
-          <input type="url" id="f-web" name="web" placeholder="https://" autocomplete="url">
-        </div>
-        <div class="form-field">
-          <label for="f-msg">Zpráva</label>
-          <textarea id="f-msg" name="zprava" required placeholder="Popište stručně své podnikání a co od kampaní očekáváte."></textarea>
-        </div>
-        <div class="form-field form-consent">
-          <label>
-            <input type="checkbox" name="gdpr" required>
-            <span>Souhlasím se <a href="../gdpr/" class="link-arrow">zpracováním osobních údajů</a> za účelem vyřízení poptávky.</span>
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Odeslat zprávu</button>
-      </form>
-      <div class="contact-aside">
-        <!-- TODO: doplnit SLA odpovědi (X pracovních dnů) -->
-        <p>Odpovídám do [X pracovních dnů].</p>
-        <div class="contact-line"><a href="mailto:ppc@honzabrzak.cz">ppc@honzabrzak.cz</a></div>
-        <div class="contact-line"><a href="tel:+420724672491">+420 724 672 491</a></div>
-      </div>
+  <div class="container page-grid">
+    <div class="contact-aside">
+      <!-- TODO: doplnit SLA odpovědi (X pracovních dnů) -->
+      <p>Odpovídám do [X pracovních dnů].</p>
+      <div class="contact-line"><a href="mailto:ppc@honzabrzak.cz">ppc@honzabrzak.cz</a></div>
+      <div class="contact-line"><a href="tel:+420724672491">+420 724 672 491</a></div>
     </div>
+    <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/dekuji/">
+      <input type="hidden" name="form-name" value="kontakt">
+      <p style="display:none"><label>Nevyplňujte: <input name="bot-field"></label></p>
+      <div class="form-field">
+        <label for="f-name">Jméno</label>
+        <input type="text" id="f-name" name="jmeno" required autocomplete="name">
+      </div>
+      <div class="form-field">
+        <label for="f-email">E-mail</label>
+        <input type="email" id="f-email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-field">
+        <label for="f-web">Web</label>
+        <input type="url" id="f-web" name="web" placeholder="https://" autocomplete="url">
+      </div>
+      <div class="form-field">
+        <label for="f-msg">Zpráva</label>
+        <textarea id="f-msg" name="zprava" required placeholder="Popište stručně své podnikání a co od kampaní očekáváte."></textarea>
+      </div>
+      <div class="form-field form-consent">
+        <label>
+          <input type="checkbox" name="gdpr" required>
+          <span>Souhlasím se <a href="../gdpr/" class="link-arrow">zpracováním osobních údajů</a> za účelem vyřízení poptávky.</span>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Odeslat zprávu</button>
+    </form>
   </div>
 </section>
 

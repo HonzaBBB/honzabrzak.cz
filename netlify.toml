@@ -27,8 +27,13 @@
 
 # Pretty URLs: /cenik → /cenik/ (Netlify to dělá defaultně u složek s index.html)
 
-# 301 redirecty — doplnit, až se něco změní oproti Tildě
-# [[redirects]]
-#   from = "/stara-url"
-#   to = "/nova-url"
-#   status = 301
+# 301 — stará Tilda URL (podtržítko) → nová se spojovníkem
+[[redirects]]
+  from = "/obchodni_podminky"
+  to = "/obchodni-podminky/"
+  status = 301
+
+[[redirects]]
+  from = "/obchodni_podminky/"
+  to = "/obchodni-podminky/"
+  status = 301

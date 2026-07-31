@@ -120,7 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container-narrow">
     <h2 class="section-title">Větší účty a specifická zadání</h2>
     <p class="muted">Účty s více službami nebo pobočkami, awareness kampaně v Display a na YouTube, call tracking telefonických poptávek nebo koordinace s vaším kreativním týmem řeším individuální nabídkou. Napište mi, co potřebujete, a připravím kalkulaci.</p>
-    <p class="muted" style="margin-top:var(--space-2)">Jednorázové <a href="../jednorazove_nastaveni_google_ads/" class="link-arrow">nastavení Google&nbsp;Ads</a> bez průběžné správy nabízím jako samostatnou službu.</p>
+    <p class="muted" style="margin-top:var(--space-2)">Když je reklamní rozpočet nízký a měsíční správa by se nevyplatila, nabízím jednorázové <a href="../jednorazove_nastaveni_google_ads/" class="link-arrow">nastavení Google&nbsp;Ads</a> za fixních 14&nbsp;400&nbsp;Kč — bez průběžného reportování.</p>
   </div>
 </section>
 
@@ -145,42 +145,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <section class="section section-fog" id="kontakt">
-  <div class="container">
-    <h2 class="section-title">Napište mi</h2>
-    <div class="contact-grid">
-      <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/dekuji/">
-        <input type="hidden" name="form-name" value="kontakt">
-        <p style="display:none"><label>Nevyplňujte: <input name="bot-field"></label></p>
-        <div class="form-field">
-          <label for="f-name">Jméno</label>
-          <input type="text" id="f-name" name="jmeno" required autocomplete="name">
-        </div>
-        <div class="form-field">
-          <label for="f-email">E-mail</label>
-          <input type="email" id="f-email" name="email" required autocomplete="email">
-        </div>
-        <div class="form-field">
-          <label for="f-web">Web</label>
-          <input type="url" id="f-web" name="web" placeholder="https://" autocomplete="url">
-        </div>
-        <div class="form-field">
-          <label for="f-msg">Zpráva</label>
-          <textarea id="f-msg" name="zprava" required placeholder="Popište stručně své podnikání a co od kampaní očekáváte."></textarea>
-        </div>
-        <div class="form-field form-consent">
-          <label>
-            <input type="checkbox" name="gdpr" required>
-            <span>Souhlasím se <a href="../gdpr/" class="link-arrow">zpracováním osobních údajů</a> za účelem vyřízení poptávky.</span>
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Odeslat zprávu</button>
-      </form>
-      <div class="contact-aside">
-        <p>Popište mi své podnikání a rozsah účtu. Odpovídám do [X pracovních dnů] a k první zprávě dostanete i představu o ceně.</p>
-        <div class="contact-line"><a href="mailto:ppc@honzabrzak.cz">ppc@honzabrzak.cz</a></div>
-        <div class="contact-line"><a href="tel:+420724672491">+420 724 672 491</a></div>
-      </div>
+  <div class="container page-grid">
+    <div class="contact-aside">
+      <h2 class="section-title">Napište mi</h2>
+      <p>Popište mi své podnikání a rozsah účtu. Odpovídám do [X pracovních dnů] a k první zprávě dostanete i představu o ceně.</p>
+      <div class="contact-line"><a href="mailto:ppc@honzabrzak.cz">ppc@honzabrzak.cz</a></div>
+      <div class="contact-line"><a href="tel:+420724672491">+420 724 672 491</a></div>
     </div>
+    <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/dekuji/">
+      <input type="hidden" name="form-name" value="kontakt">
+      <p style="display:none"><label>Nevyplňujte: <input name="bot-field"></label></p>
+      <div class="form-field">
+        <label for="f-name">Jméno</label>
+        <input type="text" id="f-name" name="jmeno" required autocomplete="name">
+      </div>
+      <div class="form-field">
+        <label for="f-email">E-mail</label>
+        <input type="email" id="f-email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-field">
+        <label for="f-web">Web</label>
+        <input type="url" id="f-web" name="web" placeholder="https://" autocomplete="url">
+      </div>
+      <div class="form-field">
+        <label for="f-msg">Zpráva</label>
+        <textarea id="f-msg" name="zprava" required placeholder="Popište stručně své podnikání a co od kampaní očekáváte."></textarea>
+      </div>
+      <div class="form-field form-consent">
+        <label>
+          <input type="checkbox" name="gdpr" required>
+          <span>Souhlasím se <a href="../gdpr/" class="link-arrow">zpracováním osobních údajů</a> za účelem vyřízení poptávky.</span>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Odeslat zprávu</button>
+    </form>
   </div>
 </section>
 
