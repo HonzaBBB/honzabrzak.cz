@@ -50,6 +50,11 @@
   color: var(--color-slate);
 }
 
+.service-body > p.muted {
+  color: var(--color-slate);
+  font-size: 15px;
+}
+
 .faq {
   display: grid;
   gap: var(--space-4);

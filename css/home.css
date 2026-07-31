@@ -40,24 +40,12 @@
 }
 
 .photo-crop { width: 100%; height: 100%; overflow: hidden; }
-.photo-frame img {
+.photo-crop img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-}
-
-.photo-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-slate);
+  object-position: center center;
+  display: block;
 }
 
 .badge-ring {
@@ -65,27 +53,8 @@
   bottom: -24px;
   left: -24px;
   width: 96px;
-  height: 96px;
-  border: 1.5px solid var(--color-brand);
-  border-radius: 50%;
-  background: var(--color-paper);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  color: var(--color-brand);
-  text-align: center;
-  line-height: 1.2;
-}
-
-.badge-ring strong { font-size: 12px; font-weight: 600; }
-.badge-ring small {
-  font-size: 9px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-slate);
-  margin-top: 3px;
+  height: auto;
+  display: block;
 }
 
 .stats {
