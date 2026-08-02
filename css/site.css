@@ -104,7 +104,13 @@ img { display: block; max-width: 100%; }
 
 /* ── Header ───────────────────────────────── */
 
-.site-header { border-bottom: 1px solid var(--color-line); }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-line);
+}
 
 .site-header .container {
   display: flex;
@@ -114,10 +120,20 @@ img { display: block; max-width: 100%; }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.01em;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
 }
 
 .site-nav {
@@ -128,6 +144,40 @@ img { display: block; max-width: 100%; }
 }
 
 .site-nav a:hover { color: var(--color-brand); }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-ink);
+  transition: transform var(--transition-hover), opacity var(--transition-hover);
+}
+
+.site-header.is-open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.site-header.is-open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header.is-open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* ── Page grid (hero + dvousloupcový obsah) ─ */
 /* Stejné sloupce jako .service na ceníku — zarovnání napříč stránkou */
@@ -285,6 +335,10 @@ img { display: block; max-width: 100%; }
   margin-top: var(--space-4);
 }
 
+.site-footer .legal span + span::before {
+  content: " · ";
+}
+
 .site-footer .legal a:hover { color: var(--color-paper); }
 
 /* ── Legal docs (OP, GDPR) ────────────────── */
@@ -333,7 +387,48 @@ img { display: block; max-width: 100%; }
 @media (max-width: 760px) {
   .page-grid { grid-template-columns: 1fr; gap: var(--space-3); }
   .page-hero h1 { font-size: 36px; }
-  .site-nav { display: none; } /* TODO: mobilní menu */
+
+  .nav-toggle { display: flex; }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    flex-direction: column;
+    gap: 0;
+    background: var(--color-paper);
+    border-bottom: 1px solid var(--color-line);
+    padding: 0 var(--container-padding);
+  }
+
+  .site-header.is-open .site-nav { display: flex; }
+
+  .site-nav a {
+    padding: 14px 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .btn-row .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-footer .legal {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .site-footer .legal span + span::before {
+    content: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
