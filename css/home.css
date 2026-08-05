@@ -138,12 +138,14 @@
   justify-content: center;
   padding: var(--space-2) var(--space-4);
   min-height: calc(40px + 2 * var(--space-2));
+  min-width: 0; /* ať široká SVG (UNA VIDA atd.) nerozbijí mřížku */
   text-decoration: none;
   color: inherit;
 }
 
 .logo-strip img {
   max-height: 40px;
+  max-width: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -281,7 +283,21 @@
 @media (max-width: 900px) {
   .dif-cards, .price-cards { grid-template-columns: 1fr; }
   .ref-cards { grid-template-columns: 1fr; }
-  .logo-strip { grid-template-columns: repeat(2, 1fr); }
+  .logo-strip {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--space-4);
+    row-gap: var(--space-3);
+  }
+  .logo-cell {
+    padding: var(--space-2) var(--space-2);
+  }
+  /* Na užším layoutu zmenšit největší loga, ať drží rytmus */
+  .logo-strip img.logo--xl {
+    max-height: 48px;
+  }
+  .logo-strip img.logo--xl.logo--wide {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 760px) {
