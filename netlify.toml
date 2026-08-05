@@ -37,3 +37,14 @@
   from = "/obchodni_podminky/"
   to = "/obchodni-podminky/"
   status = 301
+
+# Stará Tilda URL → Jak pracuji
+[[redirects]]
+  from = "/jak_funguje_spoluprace_se_mnou"
+  to = "/jak-pracuji/"
+  status = 301
+
+[[redirects]]
+  from = "/jak_funguje_spoluprace_se_mnou/"
+  to = "/jak-pracuji/"
+  status = 301
