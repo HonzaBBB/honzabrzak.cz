@@ -17,7 +17,7 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 
 ## Obsah a copy
 
-- [ ] **Reference homepage** — doplnit 2 citace ze stávajícího webu (bez PNO / absolutních čísel)
+- [x] **Reference homepage** — doplnit 2 citace ze stávajícího webu (bez PNO / absolutních čísel)
 - [ ] **Reference stránka** — kompletní seznam + citace z Tildy
 - [ ] **`/jak_funguje_spoluprace_se_mnou`** — přepsat obsah z Tildy (kroky 01–09)
 - [x] **`/jednorazove_nastaveni_google_ads`** — přepsat obsah + cenu (14 400 Kč)

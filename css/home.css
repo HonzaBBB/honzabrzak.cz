@@ -240,12 +240,24 @@
 .ref-quote { font-size: 16px; color: var(--color-ink); }
 
 .ref-client {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-slate);
   margin-top: auto;
+}
+
+/* Výjimka z radius:0 — kulatý portrét u citace */
+.ref-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .price-cards {

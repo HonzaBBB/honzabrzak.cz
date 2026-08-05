@@ -21,7 +21,12 @@ Tag row (Google Ads / Sklik / Meta Ads / ...), CTA tlačítka a kontaktní řád
 *TODO*
 
 ## Reference — výběr (homepage)
-*TODO*
+
+**Lukáš Vychodil — Aero Academy** (spolupráce od 2022)
+> Honza nám kampaně spravuje dlouhodobě a výsledky vidíme tam, kde je to pro nás podstatné, v objednávkách zkušebních letů a pilotních výcviků.
+
+**Petr Valeš — Etriatlon** (spolupráce od 2019)
+> Oceňuji příjemnou komunikaci, jasný reporting a především udržování nákladů ve stanovených mezích. Honzu můžu doporučit všem majitelům e-shopů, kteří hledají schopného PPC specialistu pro dlouhodobě dobré výsledky.
 
 ## Ceník — přehled (homepage)
 *TODO*
@@ -40,7 +45,7 @@ Tag row (Google Ads / Sklik / Meta Ads / ...), CTA tlačítka a kontaktní řád
 ### Stav
 - [x] Hero — eyebrow, H1, lead
 - [ ] Diferenciátor
-- [ ] Reference (výběr)
+- [x] Reference (výběr)
 - [ ] Ceník (přehled)
 - [ ] Kontakt
 - [ ] /jak-pracuji
