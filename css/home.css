@@ -291,6 +291,10 @@
   .logo-cell {
     padding: var(--space-2) var(--space-2);
   }
+  /* 8 log = 4×2, Algorithmics (9.) schovat kvůli souměrnosti */
+  .logo-strip > .logo-cell:last-child {
+    display: none;
+  }
   /* Na užším layoutu zmenšit největší loga, ať drží rytmus */
   .logo-strip img.logo--xl {
     max-height: 48px;
