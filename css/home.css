@@ -122,21 +122,95 @@
 .dif-more { margin-top: var(--space-6); }
 
 .logo-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-4) var(--space-6);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--space-8);
+  row-gap: var(--space-4);
   margin-top: var(--space-6);
   padding: var(--space-3) 0;
   border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
 }
 
+.logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  min-height: calc(40px + 2 * var(--space-2));
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo-strip img {
-  height: 32px;
+  max-height: 40px;
   width: auto;
+  height: auto;
+  object-fit: contain;
   filter: grayscale(1);
   opacity: 0.65;
+  transition: filter var(--transition-hover), opacity var(--transition-hover);
+}
+
+.logo-cell:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Opticky lehčí loga — zvětšit, ať sedí k ostatním */
+.logo-strip img.logo--lg {
+  max-height: 56px;
+}
+
+.logo-strip img.logo--xl {
+  max-height: 72px;
+}
+
+.logo-strip img.logo--sm {
+  max-height: 28px;
+}
+
+/* Široké wordmarky — ať nepřerostou buňku */
+.logo-strip img.logo--wide {
+  max-width: min(100%, 160px);
+}
+
+.logo-strip img.logo--lg.logo--wide {
+  max-width: min(100%, 200px);
+}
+
+.logo-strip img.logo--xl.logo--wide {
+  max-width: min(100%, 240px);
+}
+
+/* EyeTowers: plný černý blok, opticky zmenšit */
+.logo-strip img.logo--eyetowers {
+  max-height: 32px;
+}
+
+/* Miller: světlé logo — stmavit, ať se neztrácí */
+.logo-strip img.logo--miller {
+  filter: grayscale(1) brightness(0.45);
+}
+
+.logo-cell:hover img.logo--miller {
+  filter: grayscale(0) brightness(0.45);
+}
+
+.logo-cell--placeholder {
+  font-family: var(--font-mono);
+  font-size: var(--text-caption);
+  line-height: var(--text-caption-line);
+  letter-spacing: var(--text-caption-tracking);
+  color: var(--color-slate);
+  background: var(--color-fog);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-strip img {
+    transition: none;
+  }
 }
 
 .ref-cards {
@@ -207,6 +281,7 @@
 @media (max-width: 900px) {
   .dif-cards, .price-cards { grid-template-columns: 1fr; }
   .ref-cards { grid-template-columns: 1fr; }
+  .logo-strip { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 760px) {
