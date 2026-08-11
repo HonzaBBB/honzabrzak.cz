@@ -1,10 +1,4 @@
-/* Případová studie — jeden sloupec obsahu */
-
-.container-case {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
+/* Případová studie */
 
 .page-hero-body { max-width: 640px; }
 .page-hero h1 { font-size: 42px; max-width: 860px; }

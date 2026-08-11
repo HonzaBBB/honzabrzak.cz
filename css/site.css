@@ -24,6 +24,13 @@ body {
   padding: 0 var(--container-padding);
 }
 
+/* Stejná šířka obsahu napříč případovkou a referencemi */
+.container-case {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
 h1, h2 {
   font-family: var(--font-display);
   font-weight: 700;
