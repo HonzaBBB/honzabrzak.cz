@@ -100,7 +100,11 @@
   margin: var(--space-4) 0;
 }
 
-.screenshot-frame img { display: block; width: 100%; }
+.screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 .screenshot-placeholder {
   aspect-ratio: 16 / 9;
@@ -164,4 +168,5 @@
   .kpi-strip .cell:first-child { border-top: none; }
   .fact-table td:first-child { width: 130px; }
   .result-table { font-size: 13px; }
+  .screenshot-frame { display: none; }
 }
