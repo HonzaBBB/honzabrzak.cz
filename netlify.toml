@@ -48,3 +48,16 @@
   from = "/jak_funguje_spoluprace_se_mnou/"
   to = "/jak-pracuji/"
   status = 301
+
+# Interní složky — neindexovat / nezobrazovat veřejně (soubory v repu zůstávají)
+[[redirects]]
+  from = "/mockups/*"
+  to = "/"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/docs/*"
+  to = "/"
+  status = 404
+  force = true
