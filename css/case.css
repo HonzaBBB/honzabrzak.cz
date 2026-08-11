@@ -1,6 +1,7 @@
 /* Případová studie */
 
 .page-hero-body { max-width: 640px; }
+.page-hero-head + .page-hero-body { margin-top: var(--space-4); }
 .page-hero h1 { font-size: 42px; max-width: 860px; }
 
 .kpi-strip { border-bottom: 1px solid var(--color-line); }
