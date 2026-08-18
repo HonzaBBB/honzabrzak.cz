@@ -150,6 +150,10 @@ img { display: block; max-width: 100%; }
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  .site-nav { gap: var(--space-3); }
+}
+
 .site-nav a:hover { color: var(--color-brand); }
 
 .nav-toggle {
