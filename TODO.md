@@ -39,7 +39,7 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 - [ ] **Mobilní menu** (teď je nav na &lt;760px schovaný)
 - [ ] Ověřit Netlify Forms po prvním deployi (testovací odeslání)
 - [ ] 301 redirecty — až se něco oproti Tildě změní (`netlify.toml`)
-- [ ] `robots.txt` + `sitemap.xml` před přepnutím DNS
+- [x] `robots.txt` + `sitemap.xml` před přepnutím DNS
 
 ## Nasazení
 

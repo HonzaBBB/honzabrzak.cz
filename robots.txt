@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /dekuji/
+Disallow: /blog/
+Disallow: /mockups/
+Disallow: /docs/
+
+Sitemap: https://honzabrzak.cz/sitemap.xml
