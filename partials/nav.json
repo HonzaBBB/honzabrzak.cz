@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "label": "Jak pracuji", "slug": "jak-pracuji/", "home": "jak-pracuji/" },
+    { "label": "O mně", "slug": "o-mne/", "home": "o-mne/" },
+    { "label": "Reference", "slug": "reference/", "home": "#reference" },
+    { "label": "Ceník", "slug": "cenik/", "home": "#cenik" },
+    { "label": "Kontakt", "slug": "kontakt/", "home": "#kontakt" }
+  ]
+}

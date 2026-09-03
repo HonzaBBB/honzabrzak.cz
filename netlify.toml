@@ -3,7 +3,8 @@
 
 [build]
   publish = "."
-  # Žádný build command — čisté HTML/CSS
+  # Sjednotí header/footer ze partials/ před deployem
+  command = "node scripts/inject-nav.js"
 
 # Deploy preview nesmí indexovat Google
 [[context.deploy-preview.headers]]
@@ -58,6 +59,18 @@
 
 [[redirects]]
   from = "/docs/*"
+  to = "/"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/partials/*"
+  to = "/"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/scripts/*"
   to = "/"
   status = 404
   force = true
