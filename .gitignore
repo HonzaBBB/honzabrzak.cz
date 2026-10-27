@@ -5,3 +5,6 @@
 node_modules/
 .vercel/
 .netlify/
+
+# Interní analýzy (čísla z Ads, GA4, poptávky) — repo je veřejné
+docs/seo/
