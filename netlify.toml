@@ -40,14 +40,70 @@
   status = 301
 
 # Stará Tilda URL → Jak pracuji
+# force: ve složce jak_funguje_spoluprace_se_mnou/ zůstal index.html,
+# bez force by ho Netlify servíroval místo přesměrování
 [[redirects]]
   from = "/jak_funguje_spoluprace_se_mnou"
   to = "/jak-pracuji/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/jak_funguje_spoluprace_se_mnou/"
   to = "/jak-pracuji/"
+  status = 301
+  force = true
+
+# Další staré Tilda URL (podle Search Console, 10/2026)
+[[redirects]]
+  from = "/o_mne"
+  to = "/o-mne/"
+  status = 301
+
+[[redirects]]
+  from = "/o_mne/"
+  to = "/o-mne/"
+  status = 301
+
+# FAQ zatím nemá vlastní stránku, otázky jsou na ceníku
+[[redirects]]
+  from = "/faq"
+  to = "/cenik/"
+  status = 301
+
+[[redirects]]
+  from = "/faq/"
+  to = "/cenik/"
+  status = 301
+
+[[redirects]]
+  from = "/certifikaty"
+  to = "/o-mne/"
+  status = 301
+
+[[redirects]]
+  from = "/certifikaty/"
+  to = "/o-mne/"
+  status = 301
+
+# Anglická verze na novém webu není
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/en/*"
+  to = "/"
+  status = 301
+
+# Staré články blogu z Tildy (/blog/xxxx-…) → přehled blogu.
+# Bez force: nový článek ve vlastní složce má přednost před tímhle pravidlem.
+# Až se článek obnoví pod novou adresou, přidej nad tohle pravidlo
+# přesměrování ze staré adresy na novou.
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/"
   status = 301
 
 # Interní složky — neindexovat / nezobrazovat veřejně (soubory v repu zůstávají)

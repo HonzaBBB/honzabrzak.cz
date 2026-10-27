@@ -38,7 +38,11 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 - [ ] **Cookiebot** snippet NAD GTM (1:1 z Tildy) na všechny stránky
 - [ ] **Mobilní menu** (teď je nav na &lt;760px schovaný)
 - [ ] Ověřit Netlify Forms po prvním deployi (testovací odeslání)
-- [ ] 301 redirecty — až se něco oproti Tildě změní (`netlify.toml`)
+- [x] 301 redirecty starých Tilda URL (`/o_mne`, `/faq`, `/certifikaty`, `/en`, `/blog/xxxx-…`), oprava `force` u `/jak_funguje_spoluprace_se_mnou` (10/2026)
+- [x] Canonical na všech stránkách (sjednocení koncového lomítka)
+- [x] SEO titles a H1: homepage „PPC freelancer, specialista na Google Ads a Sklik“, ceník, jednorázové nastavení (10/2026)
+- [ ] Po nasazení: ověřit staré adresy v prohlížeči a poslat sitemapu v GSC a Seznam Webmasteru
+- [ ] Přesměrovat staré články na obnovené, až budou (GEO, výběr freelancera, filtr GA4)
 - [x] `robots.txt` + `sitemap.xml` před přepnutím DNS
 
 ## Nasazení
