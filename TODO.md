@@ -57,3 +57,13 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 - [ ] Vizuální reference webu (Olivine / Soapbox — už v design systému)
 - [ ] Placený display font místo Plus Jakarta Sans
 - [ ] Meta Ads v tag row na homepage? (v briefu jsou keywords, v mockupu jen Google/Sklik/GA4)
+
+## Z review webu (10/2026)
+
+- [x] Věta „Odpovídám do 2 pracovních dnů…“ u formuláře na homepage
+- [x] Kontaktní formulář na konci `/reference/`
+- [x] Pole proti spamu skryté i pro klávesnici a čtečky (`aria-hidden`, `tabindex="-1"`)
+- [ ] Štítky pod logy klientů (typ firmy) — čeká na podklady od Honzy
+- [ ] Odkaz na GitHub na `/jak-pracuji/` — čeká na adresu veřejného repa
+- [ ] Zkrácená ukázka deníku změn na homepage
+- [ ] Náhled výstupu auditu na ceníku — čeká na anonymizovanou osnovu auditu
