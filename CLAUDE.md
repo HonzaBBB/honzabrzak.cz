@@ -15,7 +15,7 @@ co se stane a proč (viz globální CLAUDE.md).
   `clients/honza-brzak/context.md`, `learnings.md`, `analyses/`.
   Nové analýzy návštěvnosti a SEO vznikají tam, ne tady.
 - **ppc-automation** (`~/Projects/ppc-automation`) — kód platformy.
-  Z webu se nevolá.
+  Z webu se volá jen keyword research (viz níž), kód se tady nemění.
 
 Ceny a popis služeb na webu musí sedět s
 `~/ppc-knowledge/offers/pricing-and-services.md`. Při změně ceníku
@@ -57,6 +57,33 @@ Hlavní body (podrobnosti a čísla jsou v reportu):
 Co je hotové, se poznamenává v `TODO.md` tady (úkoly webu). Výsledek
 s čísly (např. dopad přesměrování v GSC) patří do
 `~/ppc-knowledge/clients/honza-brzak/learnings.md`.
+
+## Keyword research (Collabim)
+
+Návrhy klíčových slov a hledanost se zjišťují příkazem z platformy.
+Bere seed slova, přes Collabim najde podobná, doplní hledanost, vyřadí
+slova pod 10 hledání měsíčně a AI je roztřídí podle relevance. Výsledek
+je CSV.
+
+```
+cd ~/Projects/ppc-automation/platform
+npm run keyword-research -- --client=honza-brzak \
+  --seeds="ppc freelancer,správa google ads" \
+  --out=$HOME/Projects/honzabrzak.cz/docs/seo/kw-collabim-<popis>-RRRR-MM-DD.csv
+```
+
+- `--client=honza-brzak` vezme popis byznysu z `accounts.json`, AI podle
+  něj hodnotí relevanci. `--context="…"` ho doplní.
+- Seed slova ber z GSC dotazů v `docs/seo/` a z tématu stránky, kterou
+  zrovna píšeš. Delší seznam dej do souboru (`--seeds-file=`, slovo na řádek).
+- Výstup ukládej do `docs/seo/` (necommituje se).
+- Každé spuštění stojí kredity v Collabimu. Spouštěj jen na Honzův pokyn
+  a seznam seed slov mu předem ukaž.
+- Když běh vyprší, nespouštěj znovu, navaž přes `--suggestions-ota=<id>`
+  nebo `--volume-ota=<id>` (ID je ve výpisu).
+- Potřebuje `COLLABIM_API_KEY` a `OPENAI_API_KEY` v
+  `~/Projects/ppc-automation/platform/.env`. Když chybí, řekni to Honzovi.
+  `.env` nečti ani nezapisuj.
 
 ## Struktura
 
