@@ -24,7 +24,7 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 - [x] **GDPR + obchodní podmínky** — texty z Tildy; redirect `/obchodni_podminky` → `/obchodni-podminky/`
 - [ ] **SLA odpovědi** — doplnit „X pracovních dnů“ na ceníku a kontaktu
 - [ ] **GitHub odkaz** na `/jak-pracuji` (transparentnost / demo skripty) — až bude repo veřejné
-- [ ] **Blog** — napsat 3 články (Shoptet Google Ads, specialista vs agentura, cena správy v ČR)
+- [ ] **Blog** — napsat 4 články podle [`docs/blog-plan.md`](docs/blog-plan.md) (agentura vs freelancer, kolik stojí PPC, co čekat od PPC, proč nechcete být první v Googlu)
 
 ## Assety
 
