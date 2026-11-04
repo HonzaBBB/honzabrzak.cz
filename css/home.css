@@ -22,6 +22,8 @@
   margin-bottom: 0;
 }
 
+.hero-proof { margin: var(--space-3) 0 0; font-size: 16px; }
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
