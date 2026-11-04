@@ -23,6 +23,12 @@
 }
 
 .hero-proof { margin: var(--space-3) 0 0; font-size: 16px; }
+.hero-proof a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.hero-proof a:hover { text-decoration-thickness: 2px; }
 
 .tag-row {
   display: flex;
