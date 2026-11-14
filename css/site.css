@@ -216,6 +216,14 @@ img { display: block; max-width: 100%; }
   margin-top: var(--space-2);
 }
 
+/* Když je nad H1 štítek, posunout text vpravo, ať začíná v úrovni H1
+   (výška řádku štítku + mezera pod ním + dorovnání výšky písmen). */
+@media (min-width: 761px) {
+  .page-hero-head:has(.eyebrow) + .page-hero-body {
+    padding-top: calc(13px * 1.6 + var(--space-2) + 3px);
+  }
+}
+
 .page-hero .lead {
   font-size: 18px;
   color: var(--color-slate);
