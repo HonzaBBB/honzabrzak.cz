@@ -44,6 +44,11 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 - [ ] Po nasazení: ověřit staré adresy v prohlížeči a poslat sitemapu v GSC a Seznam Webmasteru
 - [ ] Přesměrovat staré články na obnovené, až budou (GEO, výběr freelancera, filtr GA4)
 - [x] `robots.txt` + `sitemap.xml` před přepnutím DNS
+- [x] Vstupní stránky pro kampaň: `/sprava-ppc-kampani/`, `/audit-google-ads/`, klíčová slova na `/jak-pracuji/` (11/2026)
+- [x] GEO: `/agentura-nebo-freelancer/` s FAQPage, FAQ + FAQPage na `/cenik/`, Person + ProfessionalService na homepage, `llms.txt` (11/2026)
+- [x] Ceny správy „standardně“ místo „od“, zkrácený ceník na homepage, nový meta description homepage (11/2026)
+- [x] Starý blog: 301 dvou článků na nové stránky, ostatní `/blog/*` → `/`, zrušen `Disallow: /blog/` (11/2026)
+- [ ] Po nasazení: Rich Results Test pro homepage, `/cenik/` a `/agentura-nebo-freelancer/`; nové stránky poslat v GSC k indexaci
 
 ## Nasazení
 

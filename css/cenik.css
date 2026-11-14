@@ -65,3 +65,11 @@
 .faq h3 { margin-bottom: var(--space-1); }
 .faq p { color: var(--color-slate); font-size: 15px; }
 
+
+.service-head .price .price-prefix {
+  display: block;
+  font-family: var(--font-body, inherit);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-slate);
+}

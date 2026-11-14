@@ -1,0 +1,20 @@
+/* Stránky služeb: správa PPC, audit, agentura vs. freelancer (navazuje na cenik.css) */
+
+.section p { margin-bottom: var(--space-3); }
+.section p:last-child { margin-bottom: 0; }
+.section .service-list { margin-bottom: var(--space-3); }
+
+.service-list .li-price {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-brand);
+  margin-top: 2px;
+}
+
+.section .lead {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.5;
+}

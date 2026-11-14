@@ -97,13 +97,37 @@
   to = "/"
   status = 301
 
-# Staré články blogu z Tildy (/blog/xxxx-…) → přehled blogu.
-# Bez force: nový článek ve vlastní složce má přednost před tímhle pravidlem.
-# Až se článek obnoví pod novou adresou, přidej nad tohle pravidlo
-# přesměrování ze staré adresy na novou.
+# Staré články blogu z Tildy (/blog/xxxx-…).
+# Konkrétní články na nové stránky, musí být nad obecným pravidlem.
+[[redirects]]
+  from = "/blog/ygj7pkbv31-jak-si-vybrat-ppc-freelancera"
+  to = "/agentura-nebo-freelancer/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/ygj7pkbv31-jak-si-vybrat-ppc-freelancera/"
+  to = "/agentura-nebo-freelancer/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/87betvl2a1-potebujete-vbec-ppc-kampan"
+  to = "/sprava-ppc-kampani/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/87betvl2a1-potebujete-vbec-ppc-kampan/"
+  to = "/sprava-ppc-kampani/"
+  status = 301
+  force = true
+
+# Ostatní staré články → úvodní stránka.
+# Bez force: nový článek ve vlastní složce (i /blog/ samotný) má přednost před tímhle pravidlem.
 [[redirects]]
   from = "/blog/*"
-  to = "/blog/"
+  to = "/"
   status = 301
 
 # Interní složky — neindexovat / nezobrazovat veřejně (soubory v repu zůstávají)

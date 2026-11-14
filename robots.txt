@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /dekuji/
-Disallow: /blog/
 Disallow: /mockups/
 Disallow: /docs/
 
