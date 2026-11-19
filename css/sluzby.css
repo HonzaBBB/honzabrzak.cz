@@ -18,3 +18,21 @@
   font-weight: 500;
   line-height: 1.5;
 }
+
+/* Čísla kroků na stránce správy PPC. Šedá je o odstín tmavší než pozadí
+   šedých sekcí, ať kroužek nezmizí ani tam. */
+.step-num {
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-2);
+  border-radius: 50%;
+  background: #d4d4d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-ink);
+}

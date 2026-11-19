@@ -71,9 +71,9 @@
 
 .badge-ring {
   position: absolute;
-  bottom: -24px;
-  left: -48px;
-  width: 192px;
+  bottom: -20px;
+  left: -40px;
+  width: 156px;
   height: auto;
   display: block;
 }
@@ -395,9 +395,9 @@
   }
 
   .badge-ring {
-    width: 120px;
-    left: -36px;
-    bottom: -14px;
+    width: 100px;
+    left: -28px;
+    bottom: -12px;
   }
 
   .home-section { padding: var(--space-8) 0; }

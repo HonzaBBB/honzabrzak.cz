@@ -10,6 +10,8 @@ klientů, jen obecná rozmezí.
 
 ## 1. Agentura, nebo freelancer?
 
+Osnova: [`clanek-1-agentura-vs-freelancer.md`](clanek-1-agentura-vs-freelancer.md).
+
 - Formou otázka → krátká odpověď → podrobnosti.
 - Co dostanu, kdo na účtu reálně pracuje, převzetí správy, reporting,
   od jakého rozpočtu to dává smysl.
@@ -18,6 +20,8 @@ klientů, jen obecná rozmezí.
 - Proč první: AI dotazy na tohle téma už ukazují web na pozici 1.
 
 ## 2. Kolik stojí PPC: správa i samotná reklama
+
+Osnova: [`clanek-2-kolik-stoji-ppc.md`](clanek-2-kolik-stoji-ppc.md).
 
 Dvě poloviny:
 
@@ -39,6 +43,9 @@ Cíl: dotazy „ceník ppc“, „kolik stojí správa ppc“, „ppc specialist
 hodinová sazba“.
 
 ## 3. Co čekat od PPC kampaní (a co ne)
+
+Osnova: [`clanek-3-co-cekat-od-ppc.md`](clanek-3-co-cekat-od-ppc.md),
+text: [`clanek-3-co-cekat-od-ppc-text.md`](clanek-3-co-cekat-od-ppc-text.md).
 
 Pracovní názvy: „Proč kampaně běží a poptávky nechodí“,
 „PPC vám zákazníky nepřivede. Co tedy dělá?“
@@ -64,6 +71,9 @@ přesměrovat sem.
 
 ## 4. Proč nechcete být první v Googlu
 
+Osnova: [`clanek-4-byt-prvni-v-googlu.md`](clanek-4-byt-prvni-v-googlu.md),
+text: [`clanek-4-byt-prvni-v-googlu-text.md`](clanek-4-byt-prvni-v-googlu-text.md).
+
 - První věta: pokud myslíte neplacené výsledky, to je SEO. V placených
   být první jde zařídit hned (strategie na maximální podíl zobrazení),
   otázka je za kolik, na jaká slova a u jakého podílu hledání.
@@ -75,6 +85,11 @@ přesměrovat sem.
 
 ## Později
 
+- **Jak si nastavit Google Ads s pomocí AI.** AI vám s nastavením
+  poradí a není to špatná cesta. Problém je, že nevíte, na co se jí
+  ptát. Když se nezeptáte, jestli se vám Google Ads vůbec vyplatí,
+  ChatGPT vám to sám neřekne. Až článek vznikne, přidat na něj odkaz
+  z článku 3 (sekce „Za co platíte specialistovi…“).
 - Google Ads pro e-shop na Shoptetu.
 - **SEO není zadarmo.** Pro lidi, kteří hledají SEO a nic o něm nevědí.
   SEO nedělám a říkám to rovnou. SEO je běh na dlouhou trať. Kdo
