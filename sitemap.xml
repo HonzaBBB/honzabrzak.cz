@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://honzabrzak.cz/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://honzabrzak.cz/jak-pracuji/</loc>
@@ -17,8 +17,12 @@
     <lastmod>2026-11-14</lastmod>
   </url>
   <url>
+    <loc>https://honzabrzak.cz/seo/</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
     <loc>https://honzabrzak.cz/agentura-nebo-freelancer/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://honzabrzak.cz/o-mne/</loc>
@@ -30,7 +34,7 @@
   </url>
   <url>
     <loc>https://honzabrzak.cz/cenik/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://honzabrzak.cz/kontakt/</loc>

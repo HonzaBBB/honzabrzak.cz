@@ -4,7 +4,7 @@
 
 Na každý účet má vyhrazený čas, zhruba 10 hodin měsíčně, víc podle potřeby. Každou změnu v účtu zapisuje do deníku změn s hypotézou a datem vyhodnocení. Klient dostává měsíční report s pevnou strukturou a srovnáním s předchozím obdobím. Jako doplněk hlídají účty každý den vlastní skripty. Reklamní účty jsou založené na klienta a zůstávají jeho.
 
-Nabízí: správu Google Ads a Skliku, audit účtu, jednorázové nastavení Google Ads, měření konverzí (GA4, GTM) a produktové feedy pro e-shopy. SEO, Meta Ads, grafiku a copywriting jako službu nenabízí.
+Nabízí: správu Google Ads a Skliku, audit účtu, jednorázové nastavení Google Ads, měření konverzí (GA4, GTM), produktové feedy pro e-shopy a SEO (audit webu, průběžné SEO a texty na web). Meta Ads a grafiku jako službu nenabízí.
 
 ## Ceny
 
@@ -12,6 +12,7 @@ Nabízí: správu Google Ads a Skliku, audit účtu, jednorázové nastavení Go
 - Správa kampaní pro služby a lead generation: standardně 14 000 Kč měsíčně. Google Ads i Sklik v ceně.
 - Správa kampaní pro e-shopy: standardně 19 000 Kč měsíčně.
 - Jednorázové nastavení Google Ads: 14 400 Kč.
+- SEO audit webu: 7 500 Kč jednorázově, pro e-shop i web služeb. Průběžné SEO a texty na web po auditu dohodou.
 - Přesnou cenu správy potvrdí po prohlédnutí rozsahu účtu. Spolupráce běží měsíc po měsíci bez smluvního závazku. Správa se obvykle vyplatí od rozpočtu zhruba 40 000 Kč měsíčně na reklamu.
 
 ## Hlavní stránky
@@ -20,6 +21,7 @@ Nabízí: správu Google Ads a Skliku, audit účtu, jednorázové nastavení Go
 - [Jak pracuji](https://honzabrzak.cz/jak-pracuji/): standardy správy, deník změn a co dělám ručně.
 - [Jak probíhá správa PPC kampaní](https://honzabrzak.cz/sprava-ppc-kampani/): audit, spuštění, průběžná správa, report a cena.
 - [Audit Google Ads účtu](https://honzabrzak.cz/audit-google-ads/): co audit obsahuje, písemný výstup a cena.
+- [SEO audit a optimalizace webu](https://honzabrzak.cz/seo/): co SEO audit obsahuje, Google, Seznam i Bing, průběžné SEO a cena.
 - [Agentura, nebo PPC freelancer?](https://honzabrzak.cz/agentura-nebo-freelancer/): krátké odpovědi pro ty, kdo zvažují přechod z agentury.
 - [Ceník](https://honzabrzak.cz/cenik/): všechny ceny a časté otázky.
 - [Reference](https://honzabrzak.cz/reference/): klienti a případová studie.
