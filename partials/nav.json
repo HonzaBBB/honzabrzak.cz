@@ -5,6 +5,7 @@
     { "label": "GEO", "slug": "geo/", "home": "geo/" },
     { "label": "O mně", "slug": "o-mne/", "home": "o-mne/" },
     { "label": "Reference", "slug": "reference/", "home": "#reference" },
+    { "label": "Blog", "slug": "blog/", "home": "blog/" },
     { "label": "Ceník", "slug": "cenik/", "home": "#cenik" },
     { "label": "Kontakt", "slug": "kontakt/", "home": "#kontakt" }
   ]
