@@ -51,19 +51,27 @@ function collectPages() {
       continue;
     }
     const indexPath = path.join(ROOT, entry.name, 'index.html');
-    if (!fs.existsSync(indexPath)) continue;
-    const html = read(indexPath);
     // Přesměrovací stránky bez headeru přeskočit
-    if (!html.includes('site-header')) continue;
-    pages.push({ file: indexPath, isHome: false });
+    if (fs.existsSync(indexPath) && read(indexPath).includes('site-header')) {
+      pages.push({ file: indexPath, isHome: false, depth: 1 });
+    }
+
+    // Podstránky o patro níž (např. /blog/nazev-clanku/)
+    for (const sub of fs.readdirSync(path.join(ROOT, entry.name), { withFileTypes: true })) {
+      if (!sub.isDirectory() || sub.name.startsWith('.')) continue;
+      const subIndex = path.join(ROOT, entry.name, sub.name, 'index.html');
+      if (!fs.existsSync(subIndex)) continue;
+      if (!read(subIndex).includes('site-header')) continue;
+      pages.push({ file: subIndex, isHome: false, depth: 2 });
+    }
   }
 
   return pages;
 }
 
 function injectPage(page, headerTpl, footerTpl, items) {
-  const assetPrefix = page.isHome ? '' : '../';
-  const rootHref = page.isHome ? './' : '../';
+  const assetPrefix = page.isHome ? '' : '../'.repeat(page.depth);
+  const rootHref = page.isHome ? './' : assetPrefix;
 
   const headerNav = renderLinks(
     items,

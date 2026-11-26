@@ -135,6 +135,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/blog/0pmht7a4v1-jak-bt-vidt-na-internetu"
+  to = "/blog/byt-prvni-v-googlu/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/0pmht7a4v1-jak-bt-vidt-na-internetu/"
+  to = "/blog/byt-prvni-v-googlu/"
+  status = 301
+  force = true
+
 # Ostatní staré články → úvodní stránka.
 # Bez force: nový článek ve vlastní složce (i /blog/ samotný) má přednost před tímhle pravidlem.
 [[redirects]]

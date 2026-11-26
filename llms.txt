@@ -24,6 +24,7 @@ Nabízí: správu Google Ads a Skliku, audit účtu, jednorázové nastavení Go
 - [SEO a GEO audit webu](https://honzabrzak.cz/seo/): co audit obsahuje, Google, Seznam, Bing i AI, průběžné SEO a cena.
 - [GEO: viditelnost webu v AI vyhledávání](https://honzabrzak.cz/geo/): co je GEO, jak AI vybírá zdroje, co kontroluji a jak to měřím.
 - [Agentura, nebo PPC freelancer?](https://honzabrzak.cz/agentura-nebo-freelancer/): krátké odpovědi pro ty, kdo zvažují přechod z agentury.
+- [Proč nechcete být první v Googlu](https://honzabrzak.cz/blog/byt-prvni-v-googlu/): kolik stojí první místo v reklamě, rozdíl mezi placeným a neplaceným vyhledáváním a co sledovat místo pozice.
 - [Ceník](https://honzabrzak.cz/cenik/): všechny ceny a časté otázky.
 - [Reference](https://honzabrzak.cz/reference/): klienti a případová studie.
 - [Kontakt](https://honzabrzak.cz/kontakt/): e-mail ppc@honzabrzak.cz, telefon +420 724 672 491 a formulář.
