@@ -123,6 +123,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/blog/nt55ny4551-jak-bt-vidt-ve-vyhledvn-ai-geo-pro-cesk"
+  to = "/geo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/nt55ny4551-jak-bt-vidt-ve-vyhledvn-ai-geo-pro-cesk/"
+  to = "/geo/"
+  status = 301
+  force = true
+
 # Ostatní staré články → úvodní stránka.
 # Bez force: nový článek ve vlastní složce (i /blog/ samotný) má přednost před tímhle pravidlem.
 [[redirects]]

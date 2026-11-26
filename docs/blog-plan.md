@@ -85,20 +85,65 @@ text: [`clanek-4-byt-prvni-v-googlu-text.md`](clanek-4-byt-prvni-v-googlu-text.m
 
 ## Později
 
-- **Jak si nastavit Google Ads s pomocí AI.** AI vám s nastavením
-  poradí a není to špatná cesta. Problém je, že nevíte, na co se jí
-  ptát. Když se nezeptáte, jestli se vám Google Ads vůbec vyplatí,
-  ChatGPT vám to sám neřekne. Až článek vznikne, přidat na něj odkaz
-  z článku 3 (sekce „Za co platíte specialistovi…“).
+- **K čemu marketing je: dobrý produkt a lidé, kteří ho hledají.**
+  Úvaha, výjimka z pravidla „každý článek odpovídá na nákupní otázku“.
+  Týká se PPC, SEO i GEO. Honzovy poznámky (26.11.2026):
+  - Nejsou žádné triky, jak vyhledávačům a AI nacpat slabý produkt,
+    aby ho doporučovaly jako dobrý.
+  - Google i AI jsou čím dál chytřejší a jejich cíl je, aby lidé našli,
+    co hledají. Cíl zákazníků je stejný. Moje práce je, aby se o vašem
+    produktu dozvěděli lidé, kteří ho chtějí. Win-win-win.
+  - Není to žádná věda. Máte dobrý produkt a někdo ho chce koupit.
+    Já odstraňuji technické překážky na cestě, aby se o vás zákazník
+    v digitálním světě dozvěděl.
+  - Klient by si to pravděpodobně dokázal udělat sám. Moje přidaná
+    hodnota: už to umím a dělám to pravidelně. Most na článek o AI níž.
+  - Když dobrý produkt nemáte nebo ho nikdo nechce, nepomůžu. Říct
+    rovnou, ještě než klient zaplatí.
+  - Pozor při psaní: celá myšlenka svádí ke konstrukci „nejde o X,
+    ale o Y“. Psát ve dvou samostatných větách.
+  - Pracovní názvy: „Proč vám žádný marketing neprodá produkt, který
+    nikdo nechce“, „Win-win-win: k čemu je SEO, GEO a PPC“.
+  - Souvisí s článkem 3 (PPC je jeden dílek skládačky): odkázat na sebe
+    navzájem.
+- **Marketing s pomocí AI: proč vám ChatGPT nenastaví celý marketing.**
+  PPC, SEO i AI viditelnost. Nahrazuje dřívější námět „Jak si nastavit
+  Google Ads s pomocí AI“. Honzovy poznámky (26.11.2026):
+  - Na férovku: AI s tím pomůže velmi dobře. Nevyznít jako chytrák,
+    kterých je spousta („AI to nezvládne tak dobře jako já“). Zvládne
+    hodně, jen má limity:
+    1. Není optimalizovaná pro Česko. Většina trénovacích dat je
+       z jiného prostředí (Honza uvádí 60–70 % [OVĚŘIT, najít zdroj]).
+    2. Neřekne vám, jestli se do toho vůbec pouštět. Když se nezeptáte,
+       jestli se vám Google Ads vyplatí, sama to neřekne.
+    3. Rozumí všemu a najde si všechny informace. Když ale nejste
+       odborník, nevíte, co jí zadat.
+    4. Drobný text pod chatem: „ChatGPT je AI a může dělat chyby.“
+       Živnostník s rozpočtem 3 000 Kč: klidně to zkoušejte. Firma
+       s milionovým rozpočtem: chyby můžou být hodně drahé.
+  - Naučit by se to mohl každý, nic na tom není. Jenže učit se
+    marketing, sales, grafiku, copywriting a všechno ostatní je
+    manažerské selhání. Chcete dělat to, co umíte: obchod, řízení
+    firmy, vývoj produktu, péči o zákazníky, podle toho, kde ve firmě
+    jste. Jako u účetnictví: zvládli byste ho, ale máte účetní.
+  - Ke stažení zdarma: Markdown soubor s návody (pokyny pro ChatGPT
+    nebo Clauda) s Honzovým know-how a zaměřením na český trh. Kdo si
+    s ním nastaví marketing sám, dobře pro něj. Větší klient na tom
+    stejně stráví spoustu hodin a pak se mu vyplatí zaplatit si Honzu.
+    Ověřit předem: co do souboru dát, aby neprozradil interní postupy
+    a data klientů (repo je veřejné).
+  - Most z článku „K čemu marketing je“ (klient by to zvládl sám)
+    a z článku 3 (sekce „Za co platíte specialistovi…“).
 - Google Ads pro e-shop na Shoptetu.
 - **SEO není zadarmo.** Pro lidi, kteří hledají SEO a nic o něm nevědí.
-  SEO nedělám a říkám to rovnou. SEO je běh na dlouhou trať. Kdo
-  SEO rozumí, má na něj vlastní tým. Pointa: placené výsledky jsou lidé,
-  kteří zaplatili Googlu. Neplacené výsledky jsou lidé, kteří taky
-  zaplatili, jen ne Googlu, ale týmu, který se jim o SEO stará. Čas
-  jsou peníze. PPC je cesta, jak být vidět hned.
-  Pozor: v Ads se dotazy na SEO vylučují jako mimo obor. Článek musí
-  SEO publikum rychle roztřídit, aby nenosil poptávky na SEO.
+  Od 25.11.2026 SEO nabízím (SEO a GEO audit, `/seo/`), článek vede
+  na tuhle službu. SEO je běh na dlouhou trať. Pointa: placené výsledky
+  jsou lidé, kteří zaplatili Googlu. Neplacené výsledky jsou lidé, kteří
+  taky zaplatili, jen týmu nebo specialistovi, který se jim o SEO stará.
+  Čas jsou peníze. PPC je cesta, jak být vidět hned, SEO a GEO staví
+  viditelnost dlouhodobě. Nejlíp fungují spolu: z PPC je vidět, které
+  výrazy přinášejí poptávky, a na ty se pak cílí v SEO.
+  Odkazy na `/seo/`, `/geo/` a ceník.
 - **SEO + GEO: jak být vidět v AI.** Proč to není jednoduché a proč se
   to těžko měří (nástroje měří podíl zmínek, ne objem; ~70 % návštěv
   z ChatGPT se v GA4 ukáže jako přímá návštěva). Kdo slibuje hotové

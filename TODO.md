@@ -50,6 +50,8 @@ Stav po složení finálních stránek z mockupů (červenec 2026).
 - [x] Starý blog: 301 dvou článků na nové stránky, ostatní `/blog/*` → `/`, zrušen `Disallow: /blog/` (11/2026)
 - [x] Nová služba SEO: stránka `/seo/` (audit 7 500 Kč, průběžné SEO dohodou), řádek v ceníku na homepage i `/cenik/`, odkaz v patičce, opravené věty „SEO nedělám" na `/cenik/`, `/agentura-nebo-freelancer/` a v `llms.txt` (11/2026)
 - [ ] Po nasazení: `/seo/` poslat v GSC k indexaci
+- [x] GEO jako součást SEO auditu: `/seo/` přejmenovaná na SEO a GEO audit (cena beze změny), nová stránka `/geo/` s FAQPage, starý článek o GEO z Tildy přesměrovaný na `/geo/`, SEO v hlavním menu, ceník, homepage, patička, `llms.txt` (11/2026)
+- [ ] Po nasazení: `/geo/` poslat v GSC k indexaci
 - [ ] Po nasazení: Rich Results Test pro homepage, `/cenik/` a `/agentura-nebo-freelancer/`; nové stránky poslat v GSC k indexaci
 
 ## Nasazení
